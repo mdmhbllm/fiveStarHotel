@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="492.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarthotel.Supplier.RespondRequestsController">
+   <children>
+      <Label fx:id="newSupplyRequestL" layoutX="259.0" layoutY="35.0" style="-fx-font-size: 16; -fx-font-weight: bold;" text="New Supply Requests" />
+      <TableView fx:id="requestTableView" layoutX="41.0" layoutY="220.0" prefHeight="200.0" prefWidth="626.0">
+        <columns>
+          <TableColumn fx:id="departmentCol" prefWidth="168.00000381469727" text="Department Name" />
+          <TableColumn fx:id="itemsCol" prefWidth="171.99998474121094" text="Items &amp; Quantity" />
+            <TableColumn fx:id="deadlineCol" prefWidth="121.5999755859375" text="Delivery Deadline" />
+            <TableColumn fx:id="ActionCol" prefWidth="165.60003662109375" text="Action" />
+        </columns>
+      </TableView>
+      <Label layoutX="50.0" layoutY="77.0" text="Department Name" />
+      <Label layoutX="50.0" layoutY="128.0" text="Items &amp; Quantity" />
+      <Label layoutX="446.0" layoutY="77.0" text="Delivery Deadline" />
+      <Label layoutX="393.0" layoutY="137.0" text="Optional Note" />
+      <Button layoutX="60.0" layoutY="442.0" mnemonicParsing="false" onAction="#acceptOrDeclineOA" text="accept or decline" />
+      <Button layoutX="555.0" layoutY="442.0" mnemonicParsing="false" onAction="#returnToDashboardOA" text="Return to dashboard" />
+      <TextField fx:id="departmentNameTF" layoutX="185.0" layoutY="73.0" />
+      <TextField fx:id="itemsandQuantityTF" layoutX="149.0" layoutY="125.0" />
+      <DatePicker fx:id="deliveryDateDP" layoutX="548.0" layoutY="73.0" />
+      <TextArea fx:id="noteTA" layoutX="485.0" layoutY="110.0" prefHeight="72.0" prefWidth="91.0" />
+   </children>
+</AnchorPane>
