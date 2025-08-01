@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="575.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.final_project_2231379.SalesReportController">
+   <children>
+      <Label prefHeight="132.0" prefWidth="880.0" style="-fx-background-color: black;" text="                  Sales Report" textFill="#48ff4eba">
+         <font>
+            <Font size="61.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="175.0" prefHeight="18.0" prefWidth="84.0" text="From Date:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fromDatePicker" layoutX="134.0" layoutY="172.0" />
+      <Label layoutX="67.0" layoutY="218.0" prefHeight="20.0" prefWidth="58.0" text="To Date:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="toDatePicker" layoutX="134.0" layoutY="215.0" />
+      <Label layoutX="58.0" layoutY="259.0" prefHeight="20.0" prefWidth="75.0" text="Category:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cateGoryCombo" layoutX="134.0" layoutY="257.0" prefHeight="26.0" prefWidth="175.0" />
+      <TableView fx:id="salesReportTableView" layoutY="308.0" prefHeight="200.0" prefWidth="880.0">
+        <columns>
+          <TableColumn fx:id="oderidCol" prefWidth="182.39999389648438" text="OderId" />
+          <TableColumn fx:id="dateCol" prefWidth="174.39999389648438" text="Date" />
+            <TableColumn fx:id="amountCol" prefWidth="187.19998168945312" text="Amount" />
+            <TableColumn fx:id="itemCol" prefWidth="170.4000244140625" text="Item" />
+            <TableColumn fx:id="paymentMethodCol" prefWidth="166.40008544921875" text="Payment Method" />
+        </columns>
+      </TableView>
+      <Label fx:id="totalOdersLabel" layoutX="402.0" layoutY="173.0" prefHeight="43.0" prefWidth="190.0" text="Total Oders:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalSalesLabel" layoutX="402.0" layoutY="216.0" prefHeight="43.0" prefWidth="190.0" text="Total Sales:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="mostSoldItemLabel" layoutX="402.0" layoutY="257.0" prefHeight="43.0" prefWidth="190.0" text="Most Sold Item:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="725.0" layoutY="163.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="58.0" prefWidth="130.0" text="Generate Report" textFill="#48ff4e" />
+      <Button layoutX="725.0" layoutY="240.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="58.0" prefWidth="130.0" text="Clear" textFill="#48ff4e" />
+      <Button layoutX="717.0" layoutY="525.0" mnemonicParsing="false" onAction="#backToDashBoradOnAction" prefHeight="36.0" prefWidth="152.0" text="Back To DashBord" textFill="#48ff4e" />
+      <Label fx:id="messageLabel" layoutX="14.0" layoutY="517.0" prefHeight="43.0" prefWidth="190.0" text="Message:" textFill="#48ff4e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endX="12.20001220703125" endY="70.60000610351562" layoutX="339.0" layoutY="215.0" startX="12.20001220703125" startY="-44.600006103515625" />
+      <Line endX="12.20001220703125" endY="70.60000610351562" layoutX="642.0" layoutY="214.0" startX="12.20001220703125" startY="-44.600006103515625" />
+   </children>
+</AnchorPane>

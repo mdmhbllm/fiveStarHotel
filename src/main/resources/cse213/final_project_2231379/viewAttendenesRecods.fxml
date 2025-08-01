@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="588.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.final_project_2231379.ViewAttendenesRecodsController">
+   <children>
+      <Label layoutY="-1.0" prefHeight="103.0" prefWidth="842.0" style="-fx-background-color: black;" text="                            Staff Attendance Records ">
+         <font>
+            <Font size="33.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.48484847942988074" startX="0.23106055277766596" startY="0.8371212446328365">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.28999999165534973" green="0.9290000200271606" blue="1.0" opacity="0.7234042882919312" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.14390243902439026">
+                     <color>
+                        <Color red="0.4294833242893219" green="0.7300000190734863" blue="0.0364999994635582" opacity="0.6808510422706604" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="49.0" layoutY="157.0" prefHeight="20.0" prefWidth="74.0" text="Date From:" textFill="#5d941e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="fromDatePicker" layoutX="123.0" layoutY="154.0" prefHeight="26.0" prefWidth="153.0" />
+      <DatePicker fx:id="toDatePicker" layoutX="387.0" layoutY="154.0" prefHeight="26.0" prefWidth="153.0" />
+      <Label layoutX="321.0" layoutY="157.0" prefHeight="20.0" prefWidth="65.0" text="To Date:" textFill="#5d941e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="204.0" prefHeight="20.0" prefWidth="81.0" text=" Department" textFill="#5d941e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="dpartmentCombo" layoutX="125.0" layoutY="202.0" prefWidth="150.0" />
+      <Label layoutX="326.0" layoutY="204.0" prefHeight="20.0" prefWidth="55.0" text="Staff Id :" textFill="#5d941e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="staffIdTextField" layoutX="390.0" layoutY="202.0" prefHeight="26.0" prefWidth="154.0" />
+      <Button layoutX="42.0" layoutY="247.0" mnemonicParsing="false" onAction="#applyFilterOnAction" prefHeight="33.0" prefWidth="142.0" text="Apply Filter" textFill="#5d941e" />
+      <Button layoutX="220.0" layoutY="247.0" mnemonicParsing="false" onAction="#resetOnAction" prefHeight="34.0" prefWidth="154.0" text="Reset" textFill="#5d941e" />
+      <Button layoutX="389.0" layoutY="247.0" mnemonicParsing="false" onAction="#exportCSVOnAction" prefHeight="34.0" prefWidth="154.0" text="Export as CSV" textFill="#5d941e" />
+      <TableView fx:id="attendencestableView" layoutX="-7.0" layoutY="332.0" prefHeight="200.0" prefWidth="849.0">
+        <columns>
+          <TableColumn fx:id="staffIdCol" prefWidth="120.0" text="Staff Id" />
+          <TableColumn fx:id="nameCol" prefWidth="109.60003662109375" text="Name" />
+            <TableColumn fx:id="departmentCol" prefWidth="135.20001220703125" text="Department" />
+            <TableColumn fx:id="dateCol" prefWidth="115.20001220703125" text="Date" />
+            <TableColumn fx:id="inCol" prefWidth="127.99993896484375" text="In" />
+            <TableColumn fx:id="outCol" prefWidth="131.19989013671875" text="Out" />
+            <TableColumn fx:id="statusCol" prefWidth="120.800048828125" text="Status" />
+        </columns>
+      </TableView>
+      <Button layoutX="627.0" layoutY="547.0" mnemonicParsing="false" onAction="#backToDashboradOnAction" prefHeight="26.0" prefWidth="213.0" text="Back To Dashborad" textFill="#5d941e" />
+      <Label fx:id="messageLabel" layoutX="6.0" layoutY="537.0" prefHeight="50.0" prefWidth="570.0" text="Message" textFill="#5d941e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="248.0" layoutY="303.0" prefHeight="26.0" prefWidth="413.0" text="                           Attendance Table " textFill="#5d941e">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="606.0" layoutY="157.0" prefHeight="20.0" prefWidth="55.0" text="Sort By: " textFill="#5d941e">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="sortCombo" layoutX="662.0" layoutY="154.0" prefHeight="26.0" prefWidth="174.0" />
+      <Button layoutX="667.0" layoutY="203.0" mnemonicParsing="false" onAction="#OderOnAction" prefHeight="34.0" prefWidth="166.0" text="Oder" textFill="#5d941e" />
+   </children>
+</AnchorPane>
