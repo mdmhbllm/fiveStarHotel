@@ -1,8 +1,8 @@
-module com.example.fivestarthotel {
+module cse213.final_project_2231379 {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens com.example.fivestarthotel to javafx.fxml;
-    exports com.example.fivestarthotel;
+    opens cse213.final_project_2231379 to javafx.fxml;
+    exports cse213.final_project_2231379;
 }
