@@ -11,7 +11,7 @@ import java.util.Objects;
 public class fiveStarHotelMainApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(fiveStarHotelMainApplication.class.getResource("loginview.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(fiveStarHotelMainApplication.class.getResource("FinalProject_MahbubAlam_2221100/Guest/guestViewIfSignIn.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Five Star Hotel");
         stage.setScene(scene);

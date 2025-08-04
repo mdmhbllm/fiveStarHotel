@@ -1,5 +1,8 @@
 package com.example.fivestarthotel.FinalProject_RaziaSultana_2210915.GeneralManager;
 
+import javafx.event.ActionEvent;
+import javafx.scene.control.*;
+
 public class FinancialAspectsController
 {
     @javafx.fxml.FXML
