@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.ListOfHotelIfNotSignInController">
+   <children>
+      <Text layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC" wrappingWidth="252.21630859375">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Text>
+      <Button layoutX="623.0" layoutY="14.0" mnemonicParsing="false" onAction="#joinOnAction" prefHeight="26.0" prefWidth="65.0" text="Join" />
+      <Button layoutX="737.0" layoutY="14.0" mnemonicParsing="false" onAction="#signInOnAction" prefHeight="26.0" prefWidth="65.0" text="Sign In" />
+      <HBox layoutY="84.0" prefHeight="100.0" prefWidth="834.0">
+         <children>
+            <Text fx:id="yourSearchLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Search" textAlignment="CENTER" wrappingWidth="138.21630859375">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="40.0" top="20.0" />
+               </HBox.margin>
+            </Text>
+            <Label fx:id="DestinationLabel" prefHeight="26.0" prefWidth="110.0" text="Destination" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="40.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="DateOfStayLabel" prefHeight="26.0" prefWidth="173.0" text="Date Of Stay" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="40.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label fx:id="roomAndGuestNoLabel" prefHeight="26.0" prefWidth="110.0" text="Room and Guest" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="40.0" top="20.0" />
+               </HBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Edit Search" textAlignment="CENTER">
+               <HBox.margin>
+                  <Insets bottom="10.0" left="40.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <TableView fx:id="mainTable" layoutX="15.0" layoutY="184.0" prefHeight="467.0" prefWidth="804.0">
+        <columns>
+          <TableColumn fx:id="hotellNameCol" prefWidth="300.0" text="Hotel Name" />
+          <TableColumn fx:id="AverageRoomPriceCol" prefWidth="188.0" text="Average Room Price" />
+            <TableColumn fx:id="AvailabilityStatusCol" prefWidth="176.0" text="Availability status" />
+            <TableColumn fx:id="ViewRateCol" prefWidth="139.0" text="View Rate" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

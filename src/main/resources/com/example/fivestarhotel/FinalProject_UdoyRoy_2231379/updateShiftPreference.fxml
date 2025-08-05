@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="590.0" prefWidth="833.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_UdoyRoy_2231379.UpdateShiftPreferenceController">
+   <children>
+      <Label layoutX="-1.0" layoutY="-2.0" prefHeight="122.0" prefWidth="833.0" style="-fx-background-color: black;" text="                  Update Employee Shift Preferences " textFill="#fff314">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="169.0" prefHeight="26.0" prefWidth="95.0" text="Employee ID:   " textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="empolyeeiDtextField" layoutX="113.0" layoutY="170.0" />
+      <Label layoutX="25.0" layoutY="211.0" prefHeight="26.0" prefWidth="55.0" text="Name:" textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nameTextField" layoutX="113.0" layoutY="206.0" />
+      <Label layoutX="18.0" layoutY="249.0" prefHeight="26.0" prefWidth="95.0" text="Department: " textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="depertmentCombo" layoutX="112.0" layoutY="250.0" prefWidth="150.0" />
+      <Label layoutX="25.0" layoutY="288.0" prefHeight="26.0" prefWidth="42.0" text="Role:" textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="roleCombo" layoutX="112.0" layoutY="289.0" prefWidth="150.0" />
+      <Label layoutX="464.0" layoutY="169.0" prefHeight="26.0" prefWidth="106.0" text="Preferred Shift:" textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="preferredShiftCombo" layoutX="576.0" layoutY="169.0" prefHeight="26.0" prefWidth="227.0" />
+      <Label layoutX="464.0" layoutY="224.0" prefHeight="26.0" prefWidth="106.0" text="Available Days:" textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="monCheckbox" layoutX="736.0" layoutY="228.0" mnemonicParsing="false" text="Monday " />
+      <CheckBox fx:id="sCheckbox" layoutX="582.0" layoutY="228.0" mnemonicParsing="false" text="Saturday" />
+      <CheckBox fx:id="sunCheckBox" layoutX="664.0" layoutY="228.0" mnemonicParsing="false" text="Sunday" />
+      <CheckBox fx:id="thurCheckBox" layoutX="581.0" layoutY="254.0" mnemonicParsing="false" text="Thursday" />
+      <CheckBox fx:id="tuesCheckBox" layoutX="743.0" layoutY="254.0" mnemonicParsing="false" text="Tuesday" />
+      <CheckBox fx:id="wedCheckbox" layoutX="656.0" layoutY="254.0" mnemonicParsing="false" text="Wednesday" />
+      <CheckBox fx:id="fridayCheckBox" layoutX="581.0" layoutY="279.0" mnemonicParsing="false" text="Friday" />
+      <Label layoutX="518.0" layoutY="314.0" prefHeight="26.0" prefWidth="55.0" text="Notes:" textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="notesTextArea" layoutX="584.0" layoutY="314.0" prefHeight="134.0" prefWidth="227.0" />
+      <TableView fx:id="tableView" layoutX="25.0" layoutY="334.0" prefHeight="200.0" prefWidth="430.0">
+        <columns>
+          <TableColumn fx:id="employeeIdCol" prefWidth="88.79998588562012" text="Employee ID" />
+          <TableColumn fx:id="nameCol" prefWidth="84.00000762939453" text="Name" />
+            <TableColumn fx:id="depertmentCol" prefWidth="84.0" text="Depertment" />
+            <TableColumn fx:id="roleCol" prefWidth="84.79998779296875" text="Role" />
+            <TableColumn fx:id="shiftCol" prefWidth="90.4000244140625" text="Shift" />
+        </columns>
+      </TableView>
+      <Label fx:id="statusLabel" layoutX="514.0" layoutY="464.0" prefHeight="51.0" prefWidth="299.0" text="Status:" textFill="#aeb707">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button layoutX="25.0" layoutY="543.0" mnemonicParsing="false" onAction="#saveAndAddOnAction" prefHeight="34.0" prefWidth="430.0" text="Save Preference And Add On Table View" textFill="#aeb707" />
+      <Button layoutX="300.0" layoutY="288.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="26.0" prefWidth="71.0" text="Clear" textFill="#aeb707" />
+      <Button layoutX="682.0" layoutY="547.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="26.0" prefWidth="121.0" text="Back to Dashborad" textFill="#aeb707" />
+      <Line endX="30.199981689453125" endY="-9.399993896484375" layoutX="364.0" layoutY="169.0" startX="30.199981689453125" startY="141.0" />
+   </children>
+</AnchorPane>

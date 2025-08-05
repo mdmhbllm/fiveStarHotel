@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="516.0" prefWidth="774.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_UdoyRoy_2231379.SentPolicyReminderToEmployeeController">
+   <children>
+      <Label layoutY="-2.0" prefHeight="134.0" prefWidth="774.0" style="-fx-background-color: black;" text="              Send HR Policy Reminder to Employees">
+         <font>
+            <Font size="33.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.9772727128231165" endY="0.9053030257875269" startX="0.0047348484848484685" startY="0.24242430022268585">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.8565149903297424" green="0.8700000047683716" blue="0.0608999989926815" opacity="0.46863222122192383" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color red="0.0608999989926815" green="0.8700000047683716" blue="0.26317501068115234" opacity="0.4912766218185425" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="18.0" layoutY="166.0" text="Policy Title:" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="268.0" prefHeight="20.0" prefWidth="63.0" text="Message:" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="14.0" layoutY="211.0" text="Reference Link:" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="meaasageTextArea" layoutX="108.0" layoutY="268.0" prefHeight="110.0" prefWidth="150.0" />
+      <TextField fx:id="policytitleTextField" layoutX="108.0" layoutY="163.0" />
+      <TextField fx:id="referenceLinkTextField" layoutX="108.0" layoutY="208.0" />
+      <Button layoutX="14.0" layoutY="420.0" mnemonicParsing="false" onAction="#sentReminderToAllOnAction" prefHeight="51.0" prefWidth="227.0" text=" Send Reminder to All Employees" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="258.0" layoutY="420.0" mnemonicParsing="false" onAction="#clearFormOnAction" prefHeight="51.0" prefWidth="102.0" text="Clear Form" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableView" layoutX="338.0" layoutY="168.0" prefHeight="210.0" prefWidth="435.0">
+        <columns>
+          <TableColumn fx:id="policyIdCol" prefWidth="92.0" text="Pocliy Id " />
+          <TableColumn fx:id="titleCol" prefWidth="95.20001220703125" text="Title " />
+            <TableColumn fx:id="messageCol" prefWidth="75.20001220703125" text="Message" />
+            <TableColumn fx:id="linkCol" prefWidth="78.4000244140625" text="Link" />
+            <TableColumn fx:id="sentDateCol" prefWidth="94.39996337890625" text="Sent Date" />
+        </columns>
+      </TableView>
+      <Label layoutX="466.0" layoutY="143.0" prefHeight="20.0" prefWidth="179.0" text="                Sent Reminders" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="614.0" layoutY="475.0" mnemonicParsing="false" onAction="#backToDashboradOnAction" prefHeight="26.0" prefWidth="150.0" text="Back to Dashborad" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="messageLabel" layoutX="387.0" layoutY="386.0" prefHeight="85.0" prefWidth="382.0" text="Message:" textFill="#1eb131">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Line endX="23.20001220703125" endY="198.4000244140625" layoutX="270.0" layoutY="186.0" startX="23.20001220703125" startY="-25.599990844726562" />
+   </children>
+</AnchorPane>

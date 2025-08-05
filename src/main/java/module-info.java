@@ -3,6 +3,13 @@ module com.example.fivestarhotel {
     requires javafx.fxml;
 
 
-    opens com.example.fivestarthotel to javafx.fxml;
-    exports com.example.fivestarthotel;
+    opens com.example.fivestarhotel to javafx.fxml;
+    opens com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest to javafx.fxml;
+    opens com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel to javafx.fxml;
+    opens com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Receptionist to javafx.fxml;
+    exports com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest;
+    exports com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel;
+    exports com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Receptionist;
+    exports com.example.fivestarhotel;
+
 }

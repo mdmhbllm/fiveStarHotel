@@ -60,7 +60,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>cse213.final_project_2231379/com.example.fivestarthotel.FinalProject_UdoyRoy_2231379.HelloApplication
+                            <mainClass>cse213.final_project_2231379/com.example.fivestarhotel.FinalProject_UdoyRoy_2231379.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
