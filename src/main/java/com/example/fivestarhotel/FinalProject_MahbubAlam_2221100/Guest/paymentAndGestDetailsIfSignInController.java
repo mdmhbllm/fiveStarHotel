@@ -2,7 +2,7 @@ package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest;
 
 import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.Booking;
 import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.Payment;
-import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Utility.DataManager;
+import com.example.fivestarhotel.Utility.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

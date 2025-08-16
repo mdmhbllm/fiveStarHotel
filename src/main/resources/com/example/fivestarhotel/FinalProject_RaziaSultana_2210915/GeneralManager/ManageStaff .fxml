@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.GeneralManager.ManageStaffController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label fx:id="manageStaffL" layoutX="260.0" layoutY="6.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Manage Staff " />
+        <Label layoutX="23.0" layoutY="85.0" text="Departmen Namet" />
+        <Label layoutX="325.0" layoutY="76.0" text="Staff ID" />
+        <Button layoutX="270.0" layoutY="124.0" mnemonicParsing="false" onAction="#evaluateOA" text="Evaluate" />
+        <Button layoutX="510.0" layoutY="345.0" mnemonicParsing="false" onAction="#logOutOA" text="Logout" />
+        <TableView fx:id="staffTV" layoutX="13.0" layoutY="200.0" prefHeight="134.0" prefWidth="521.0">
+            <columns>
+                <TableColumn fx:id="staffIdCol" prefWidth="75.0" text="Staff ID" />
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="departmentCol" prefWidth="75.0" text="Department" />
+                <TableColumn fx:id="shifttimeCol" prefWidth="75.0" text="Shift Time" />
+                <TableColumn fx:id="availabilityCool" prefWidth="92.00006103515625" text="Availability" />
+                <TableColumn fx:id="performanceRatingCol" prefWidth="128.79998779296875" text="Performance Rating" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="departmentNameCB" layoutX="137.0" layoutY="85.0" prefWidth="150.0" />
+        <TextField fx:id="staffIdTF" layoutX="378.0" layoutY="72.0" />
+        <Button layoutX="23.0" layoutY="11.0" mnemonicParsing="false" onAction="#backOA" text="back" />
+    </children>
+</AnchorPane>

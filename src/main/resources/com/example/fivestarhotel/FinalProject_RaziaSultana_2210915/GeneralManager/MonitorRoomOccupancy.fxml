@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.GeneralManager.MonitorRoomOccupancyController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label fx:id="monitorRoomOccupancyL" layoutX="193.0" layoutY="22.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Monitor Room Occupancy" />
+        <TableView fx:id="roomViewTV" layoutX="16.0" layoutY="73.0" prefHeight="102.0" prefWidth="526.0">
+            <columns>
+                <TableColumn fx:id="roomNumberCol" prefWidth="106.39996337890625" text="Room Number" />
+                <TableColumn fx:id="upcomingRoomCol" prefWidth="143.20001220703125" text="Upcoming Bookings " />
+                <TableColumn fx:id="availableRoomByTypeCol" prefWidth="112.79998779296875" text="Available Rooms by Type" />
+                <TableColumn fx:id="availableDailyRateCol" prefWidth="168.79998779296875" text="Average Daily Rate" />
+            </columns>
+        </TableView>
+        <Label layoutX="24.0" layoutY="213.0" text="date range" />
+        <Label layoutX="300.0" layoutY="213.0" text="room type" />
+        <Button layoutX="216.0" layoutY="279.0" mnemonicParsing="false" onAction="#updateViewOA" text="Update View" />
+        <Button layoutX="16.0" layoutY="266.0" mnemonicParsing="false" onAction="#generateReportOA" text="Generate Report" />
+        <Button layoutX="500.0" layoutY="351.0" mnemonicParsing="false" onAction="#logOutOA" text="Logout" />
+        <DatePicker fx:id="dateRangeDP" layoutX="88.0" layoutY="209.0" />
+        <ComboBox fx:id="roomTypeCB" layoutX="391.0" layoutY="209.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

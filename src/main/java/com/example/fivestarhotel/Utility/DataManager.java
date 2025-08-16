@@ -1,6 +1,4 @@
-package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Utility;
-
-import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.Hotel;
+package com.example.fivestarhotel.Utility;
 
 import java.io.*;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
 package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Receptionist;
 
-import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.User.User;
+import com.example.fivestarhotel.User.User;
 
 import java.io.Serializable;
 import java.util.Random;

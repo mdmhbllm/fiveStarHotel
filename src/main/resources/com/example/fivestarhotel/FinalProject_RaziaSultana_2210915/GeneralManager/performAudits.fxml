@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.GeneralManager.PerformAuditsController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label fx:id="performAuditsL" layoutX="243.0" layoutY="28.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Perform Audits" />
+        <Label layoutX="162.0" layoutY="80.0" text="department" />
+        <TableView fx:id="auditTV" layoutX="26.0" layoutY="192.0" prefHeight="200.0" prefWidth="630.0">
+            <columns>
+                <TableColumn fx:id="departmentNameCol" prefWidth="163.19997787475586" text="Department name" />
+                <TableColumn fx:id="lastAudtiDateCol" prefWidth="134.40003967285156" text="Last Audit Date" />
+                <TableColumn fx:id="auditScoreCol" prefWidth="153.5999755859375" text="Audit Score" />
+                <TableColumn fx:id="complianceStatusCol" prefWidth="180.0" text="Compliance Status" />
+            </columns>
+        </TableView>
+        <Button layoutX="371.0" layoutY="403.0" mnemonicParsing="false" onAction="#viewAuditOA" text="View Audit" />
+        <Button layoutX="26.0" layoutY="15.0" mnemonicParsing="false" onAction="#backOA" text="back" />
+        <Button layoutX="549.0" layoutY="429.0" mnemonicParsing="false" onAction="#logOutOA" text="Logout" />
+        <ComboBox fx:id="departmentCB" layoutX="261.0" layoutY="76.0" prefWidth="150.0" />
+    </children>
+
+</AnchorPane>

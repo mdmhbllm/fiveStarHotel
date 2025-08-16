@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.GeneralManager.GeneralManagerDashboardController"
+            prefHeight="400.0" prefWidth="600.0" >
+    <children>
+        <Label fx:id="generalManagerL" layoutX="230.0" layoutY="18.0" style="-fx-font-weight: bold;" text="General Manager">
+            <font>
+                <Font size="26.0" />
+            </font>
+            <effect>
+                <BoxBlur height="0.0" iterations="0" width="0.0" />
+            </effect>
+        </Label>
+        <Button layoutX="65.0" layoutY="160.0" mnemonicParsing="false" onAction="#superviseOperationsOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Supervise Operations" />
+        <Button layoutX="65.0" layoutY="219.0" mnemonicParsing="false" onAction="#manageStaffOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Manage Staff " />
+        <Button layoutX="281.0" layoutY="161.0" mnemonicParsing="false" onAction="#guestFeedbackOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Guest Feedback " />
+        <Button layoutX="272.0" layoutY="219.0" mnemonicParsing="false" onAction="#monitorFinanceOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Monitor Finances" />
+        <Button layoutX="65.0" layoutY="307.0" mnemonicParsing="false" onAction="#manageEmergenciesOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Manage Emergencies" />
+        <Button layoutX="255.0" layoutY="307.0" mnemonicParsing="false" onAction="#manageMarketingOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Manage Marketing" />
+        <Button layoutX="440.0" layoutY="161.0" mnemonicParsing="false" onAction="#performAuditsOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Perform Audits" />
+        <Button layoutX="440.0" layoutY="226.0" mnemonicParsing="false" onAction="#monitorRoomOccupancyOA" style="-fx-font-weight: bold; -fx-background-radius: 5;" text="Monitor Room Occupancy" />
+        <Button layoutX="507.0" layoutY="385.0" mnemonicParsing="false" onAction="#logoutOA" style="-fx-font-weight: bold;" text="Logout" />
+        <Label fx:id="dashboardL" layoutX="25.0" layoutY="22.0" style="-fx-font-weight: bold;" text="Dashboard">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

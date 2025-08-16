@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.GeneralManager.MonitorFinancesController"
+            prefHeight="400.0" prefWidth="600.0">
+    <children>
+        <Label fx:id="monitorFinanceL" layoutX="253.0" layoutY="26.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Monitor Finances" />
+        <Label layoutX="64.0" layoutY="107.0" text="department " />
+        <Label layoutX="69.0" layoutY="133.0" text="date" />
+        <Button layoutX="29.0" layoutY="31.0" mnemonicParsing="false" onAction="#backOA" text="back" />
+        <Button layoutX="454.0" layoutY="151.0" mnemonicParsing="false" onAction="#applyOA" text="Apply" />
+        <Button layoutX="478.0" layoutY="360.0" mnemonicParsing="false" onAction="#logOutOA" text="Logout" />
+        <TableView fx:id="monitorFinanceTV" layoutX="64.0" layoutY="200.0" prefHeight="150.0" prefWidth="468.0">
+            <columns>
+                <TableColumn fx:id="departmentBudgetCol" prefWidth="150.4000244140625" text="Department Budgets" />
+                <TableColumn minWidth="0.0" prefWidth="0.0" text="Monthly Expenses" />
+                <TableColumn fx:id="revenueCol" prefWidth="125.5999755859375" text="Revenue" />
+                <TableColumn fx:id="profitMarginCol" prefWidth="169.60003662109375" text="Profit Margins" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="departmentCB" layoutX="163.0" layoutY="103.0" prefWidth="150.0" />
+        <DatePicker fx:id="datePK" layoutX="123.0" layoutY="138.0" />
+    </children>
+</AnchorPane>

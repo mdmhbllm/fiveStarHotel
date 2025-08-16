@@ -1,4 +1,4 @@
-package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Utility;
+package com.example.fivestarhotel.Utility;
 
 import java.io.IOException;
 import java.io.ObjectOutputStream;

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.GeneralManager.GuestFeedbackController"
+            prefHeight="400.0" prefWidth="600.0" >
+    <children>
+        <Label fx:id="guestFeedbackL" layoutX="236.0" layoutY="20.0" style="-fx-font-size: 15; -fx-font-weight: bold;" text="Guest Feedback" />
+        <Label layoutX="72.0" layoutY="67.0" text="Guest Type" />
+        <Label layoutX="335.0" layoutY="67.0" text="Rating" />
+        <Button layoutX="292.0" layoutY="128.0" mnemonicParsing="false" onAction="#filterOA" text="Filter" />
+        <Button layoutX="14.0" layoutY="18.0" mnemonicParsing="false" onAction="#backOA" text="Back" />
+        <Button layoutX="500.0" layoutY="339.0" mnemonicParsing="false" onAction="#logoutOA" text="Logout" />
+        <TableView fx:id="feedbackTV" layoutX="13.0" layoutY="179.0" prefHeight="130.0" prefWidth="578.0">
+            <columns>
+                <TableColumn fx:id="guestIdCol" prefWidth="75.0" text="Guest ID" />
+                <TableColumn fx:id="nameCol" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="roomNOCol" prefWidth="75.0" text="Room No." />
+                <TableColumn fx:id="guestCol" prefWidth="75.0" text="Guest Type" />
+                <TableColumn fx:id="feedbackCMCol" prefWidth="143.2000732421875" text="Feedback Comments" />
+                <TableColumn fx:id="starRatingCol" prefWidth="133.5999755859375" text="Star Rating" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="guestTypeCB" layoutX="142.0" layoutY="63.0" prefWidth="150.0" />
+        <ComboBox fx:id="ratingCB" layoutX="414.0" layoutY="63.0" prefWidth="150.0" />
+    </children>
+</AnchorPane>

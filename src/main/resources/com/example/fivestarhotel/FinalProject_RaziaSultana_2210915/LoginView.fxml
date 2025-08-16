@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.fivestarhotel.FinalProject_RaziaSultana_2210915.LoginViewController"
+            prefHeight="400.0" prefWidth="600.0" >
+    <children>
+        <Label layoutX="150" layoutY="30" style="-fx-font-size: 18; -fx-font-weight: bold;" text="Hotel Login"/>
+        <Label layoutX="50" layoutY="90" text="Username:"/>
+        <TextField fx:id="usernameTF" layoutX="150" layoutY="85" prefWidth="200"/>
+        <Label layoutX="50" layoutY="140" text="Password:"/>
+        <PasswordField fx:id="passwordPF" layoutX="150" layoutY="135" prefWidth="200"/>
+        <Button layoutX="150" layoutY="200" text="Login" onAction="#loginOA"/>
+        <Label fx:id="errorL" layoutX="50" layoutY="240" style="-fx-text-fill: red;"/>
+    </children>
+</AnchorPane>

@@ -11,7 +11,7 @@ module com.example.fivestarhotel {
     exports com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel;
     exports com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Receptionist;
     exports com.example.fivestarhotel;
-    exports com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.User;
-    opens com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.User to javafx.fxml;
+    exports com.example.fivestarhotel.User;
+    opens com.example.fivestarhotel.User to javafx.fxml;
 
 }

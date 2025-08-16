@@ -1,4 +1,4 @@
-package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.User;
+package com.example.fivestarhotel.User;
 
 import java.io.Serializable;
 
