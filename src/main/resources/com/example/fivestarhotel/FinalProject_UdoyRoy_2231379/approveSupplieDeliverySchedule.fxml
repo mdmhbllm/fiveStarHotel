@@ -11,10 +11,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="530.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_UdoyRoy_2231379.ApproveSupplieDeliveryScheduleController">
+<AnchorPane prefHeight="530.0" prefWidth="784.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.final_project_2231379.ApproveSupplieDeliveryScheduleController">
    <children>
-      <Label layoutY="-1.0" prefHeight="104.0" prefWidth="783.0" style="-fx-background-color: black;" text="               Approve Supplier Delivery Schedule" textFill="#afff02">
+      <Label layoutY="-1.0" prefHeight="104.0" prefWidth="784.0" style="-fx-background-color: black;" text="               Approve Supplier Delivery Schedule" textFill="#afff02">
          <font>
             <Font size="32.0" />
          </font>
@@ -31,28 +30,28 @@
          </font>
       </Label>
       <ComboBox fx:id="statusFilterCombo" layoutX="96.0" layoutY="174.0" prefHeight="26.0" prefWidth="175.0" />
-      <Button layoutX="14.0" layoutY="231.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="42.0" prefWidth="128.0" text="Search" />
+      <Button layoutX="14.0" layoutY="231.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="42.0" prefWidth="128.0" text="Search" textFill="#87a939" />
       <TableView fx:id="deliveryTableView" layoutY="288.0" prefHeight="178.0" prefWidth="784.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="122.39999389648438" text="ID" />
-          <TableColumn fx:id="supplierCol" prefWidth="118.39999389648438" text="Supplier" />
-            <TableColumn fx:id="deliverydateCol" prefWidth="103.20001220703125" text="Date" />
-            <TableColumn fx:id="deliveryTime" prefWidth="118.4000244140625" text="Time" />
-            <TableColumn fx:id="itemsCol" prefWidth="111.199951171875" text="items" />
-            <TableColumn fx:id="deliverystatusCol" prefWidth="112.0" text="Status" />
-            <TableColumn fx:id="actionCol" prefWidth="105.5999755859375" text="Action" />
+          <TableColumn fx:id="idCol" prefWidth="65.60000610351562" text="ID" />
+          <TableColumn fx:id="supplierCol" prefWidth="112.7999267578125" text="Supplier" />
+            <TableColumn fx:id="deliverydateCol" prefWidth="111.20001220703125" text="Date" />
+            <TableColumn fx:id="deliveryTime" prefWidth="116.0" text="Time" />
+            <TableColumn fx:id="itemsCol" prefWidth="110.4000244140625" text="items" />
+            <TableColumn fx:id="deliverystatusCol" prefWidth="100.79998779296875" text="Status" />
+            <TableColumn fx:id="actionCol" prefWidth="179.199951171875" text="Rejection Reason" />
         </columns>
       </TableView>
-      <Button layoutX="160.0" layoutY="230.0" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="42.0" prefWidth="118.0" text="Refresh" />
-      <Button layoutX="582.0" layoutY="495.0" mnemonicParsing="false" onAction="#backToDashboradOnAction" prefHeight="26.0" prefWidth="194.0" text="Back to Dashborad" />
-      <Label layoutX="453.0" layoutY="124.0" prefHeight="22.0" prefWidth="118.0" text="Rejection Reson:" textFill="#afff02">
+      <Button layoutX="160.0" layoutY="230.0" mnemonicParsing="false" onAction="#refreshOnAction" prefHeight="42.0" prefWidth="118.0" text="Refresh" textFill="#87a939" />
+      <Button layoutX="582.0" layoutY="495.0" mnemonicParsing="false" onAction="#backToDashboradOnAction" prefHeight="26.0" prefWidth="194.0" text="Back to Dashborad" textFill="#87a939" />
+      <Label layoutX="404.0" layoutY="124.0" prefHeight="22.0" prefWidth="118.0" text="Rejection Reson:" textFill="#afff02">
          <font>
             <Font size="15.0" />
          </font>
       </Label>
-      <TextArea fx:id="rejectionReasonTextArea" layoutX="571.0" layoutY="125.0" prefHeight="98.0" prefWidth="182.0" />
-      <Button layoutX="512.0" layoutY="235.0" mnemonicParsing="false" onAction="#confirmRejectionOnAction" prefHeight="34.0" prefWidth="118.0" text="Comfirm Rejection" />
-      <Button layoutX="651.0" layoutY="235.0" mnemonicParsing="false" onAction="#cancleOnAction" prefHeight="34.0" prefWidth="118.0" text="Cancel" />
+      <TextArea fx:id="rejectionReasonTextArea" layoutX="522.0" layoutY="127.0" prefHeight="98.0" prefWidth="242.0" />
+      <Button layoutX="410.0" layoutY="235.0" mnemonicParsing="false" onAction="#confirmRejectionOnAction" prefHeight="34.0" prefWidth="150.0" text="Comfirm Rejection" textFill="#87a939" />
+      <Button layoutX="600.0" layoutY="235.0" mnemonicParsing="false" onAction="#approveOnAction" prefHeight="34.0" prefWidth="169.0" text="Approve and Save" textFill="#87a939" />
       <Line endX="-1.4000244140625" endY="-25.400001525878906" layoutX="379.0" layoutY="146.0" startX="-1.4000244140625" startY="118.60000610351562" />
    </children>
 </AnchorPane>

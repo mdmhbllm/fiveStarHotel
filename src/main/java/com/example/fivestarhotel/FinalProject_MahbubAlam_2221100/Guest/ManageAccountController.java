@@ -55,6 +55,36 @@ public class ManageAccountController {
         String country = (String) countryComboBox.getValue();
         String oldGuestId = null;
         String oldPassword = null;
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("Error Dialog");
+        alert.setHeaderText("Error");
+
+        if(firstName.isEmpty()){
+            alert.setContentText("Enter the first name");
+            alert.showAndWait();
+        } else if (lastName.isEmpty()) {
+            alert.setContentText("Enter the last name");
+            alert.showAndWait();
+        }else if (email.isEmpty()) {
+            alert.setContentText("Enter the email");
+            alert.showAndWait();
+        }else if (address.isEmpty()) {
+            alert.setContentText("Enter the address");
+            alert.showAndWait();
+        }else if (phone.isEmpty()) {
+            alert.setContentText("Enter phone number");
+            alert.showAndWait();
+        }else if (city.isEmpty()) {
+            alert.setContentText("Enter city name");
+            alert.showAndWait();
+        }else if (zip.isEmpty()) {
+            alert.setContentText("Enter the zip code");
+            alert.showAndWait();
+        } else if (country.isEmpty()) {
+            alert.setContentText("Select Country name");
+            alert.showAndWait();
+        }
+
 
         List<Guest> guestList = DataManager.getObject("Guest.bin");
         List<Guest> newguesttList = new ArrayList<>();
@@ -72,7 +102,7 @@ public class ManageAccountController {
         newguesttList.add(updatedGuest);
         DataManager.saveUpdatedObject(newguesttList, "Guest.bin");
 
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        Alert alert_two = new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Confirm Dialog");
         alert.setHeaderText("Confirm");
         alert.setContentText("Your data has been updated");

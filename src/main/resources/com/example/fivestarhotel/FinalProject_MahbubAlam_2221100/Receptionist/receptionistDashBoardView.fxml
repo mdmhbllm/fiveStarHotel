@@ -7,7 +7,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.guestViewController">
     <children>
-        <Button layoutX="747.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="User Name" />
+        <Button layoutX="722.0" layoutY="13.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="User Name" />
         <Text layoutX="21.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel" wrappingWidth="269.21630859375">
             <font>
                 <Font size="50.0" />
@@ -18,8 +18,7 @@
       <Button layoutX="58.0" layoutY="260.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="294.0" text="Check Room  Availability" />
       <Button layoutX="438.0" layoutY="253.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="294.0" text="Booking List" />
       <Button layoutX="58.0" layoutY="343.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="294.0" text="Under Maintenance Room" />
-      <Button layoutX="438.0" layoutY="343.0" mnemonicParsing="false" prefHeight="104.0" prefWidth="294.0" text="Update Guest Information" />
-      <Button layoutX="64.0" layoutY="420.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="294.0" text="Bill Generate" />
-      <Button layoutX="747.0" layoutY="56.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Log Out" />
+      <Button layoutX="438.0" layoutY="343.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="294.0" text="Bill Generate" />
+      <Button layoutX="722.0" layoutY="55.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Log Out" />
     </children>
 </AnchorPane>

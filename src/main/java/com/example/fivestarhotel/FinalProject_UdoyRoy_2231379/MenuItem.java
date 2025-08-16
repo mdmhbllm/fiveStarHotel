@@ -1,8 +1,11 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import javafx.scene.control.Label;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class MenuItem {
+public class MenuItem implements Serializable {
     private String itemId;
     private String name;
     private String category;

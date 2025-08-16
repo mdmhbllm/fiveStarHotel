@@ -1,9 +1,10 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class RecognitionEvent {
+public class RecognitionEvent implements Serializable {
     private String eventName;
     private LocalDate date;
     private LocalTime time;

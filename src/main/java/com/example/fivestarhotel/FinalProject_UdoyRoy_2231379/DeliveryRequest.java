@@ -1,19 +1,20 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.List;
 
-public class DeliveryRequest {
-    private int requestId;
+public class DeliveryRequest implements Serializable {
+    private String requestId;
     private String supplierName;
     private LocalDate deliveryDate;
-    private LocalTime deliveryTime;
-    private List<String> items;
+    private String deliveryTime;
+    private String items;
     private String status;
     private String rejectionReason;
 
-    public DeliveryRequest(int requestId, String supplierName, LocalDate deliveryDate, LocalTime deliveryTime, List<String> items, String status, String rejectionReason) {
+    public DeliveryRequest(String requestId, String supplierName, LocalDate deliveryDate, String deliveryTime, String items, String status, String rejectionReason) {
         this.requestId = requestId;
         this.supplierName = supplierName;
         this.deliveryDate = deliveryDate;
@@ -23,11 +24,11 @@ public class DeliveryRequest {
         this.rejectionReason = rejectionReason;
     }
 
-    public int getRequestId() {
+    public String getRequestId() {
         return requestId;
     }
 
-    public void setRequestId(int requestId) {
+    public void setRequestId(String requestId) {
         this.requestId = requestId;
     }
 
@@ -47,19 +48,19 @@ public class DeliveryRequest {
         this.deliveryDate = deliveryDate;
     }
 
-    public LocalTime getDeliveryTime() {
+    public String getDeliveryTime() {
         return deliveryTime;
     }
 
-    public void setDeliveryTime(LocalTime deliveryTime) {
+    public void setDeliveryTime(String deliveryTime) {
         this.deliveryTime = deliveryTime;
     }
 
-    public List<String> getItems() {
+    public String getItems() {
         return items;
     }
 
-    public void setItems(List<String> items) {
+    public void setItems(String items) {
         this.items = items;
     }
 
@@ -82,11 +83,11 @@ public class DeliveryRequest {
     @Override
     public String toString() {
         return "DeliveryRequest{" +
-                "requestId=" + requestId +
+                "requestId='" + requestId + '\'' +
                 ", supplierName='" + supplierName + '\'' +
                 ", deliveryDate=" + deliveryDate +
-                ", deliveryTime=" + deliveryTime +
-                ", items=" + items +
+                ", deliveryTime='" + deliveryTime + '\'' +
+                ", items='" + items + '\'' +
                 ", status='" + status + '\'' +
                 ", rejectionReason='" + rejectionReason + '\'' +
                 '}';

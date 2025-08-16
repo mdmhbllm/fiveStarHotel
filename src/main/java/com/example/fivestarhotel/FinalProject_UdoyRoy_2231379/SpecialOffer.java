@@ -1,8 +1,9 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class SpecialOffer {
+public class SpecialOffer implements Serializable {
     private int offerId;
     private String title;
     private String description;

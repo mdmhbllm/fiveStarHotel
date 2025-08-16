@@ -4,30 +4,46 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="474.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_UdoyRoy_2231379.StaffBriefingController">
+<AnchorPane prefHeight="474.0" prefWidth="763.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.final_project_2231379.StaffBriefingController">
    <children>
-      <Label prefHeight="94.0" prefWidth="763.0" style="-fx-background-color: black;" text="                              Daily Staff Briefing" textFill="#fc081d">
+      <Label prefHeight="94.0" prefWidth="763.0" style="-fx-background-color: black;" text="                         Announce Daily Staff Briefing" textFill="#fc081d">
          <font>
             <Font size="32.0" />
          </font>
       </Label>
-      <Label layoutX="51.0" layoutY="145.0" text="Date:" textFill="#fc081d" />
-      <DatePicker fx:id="briefingDatePicker" layoutX="87.0" layoutY="141.0" />
-      <Label layoutX="51.0" layoutY="186.0" text="Time:" textFill="#fc081d" />
-      <TextField fx:id="briefingTimeTextField" layoutX="87.0" layoutY="182.0" prefHeight="26.0" prefWidth="175.0" />
-      <Label layoutX="43.0" layoutY="226.0" text="Agenda:" textFill="#fc081d" />
-      <TextArea fx:id="agendaTextArea" layoutX="87.0" layoutY="226.0" prefHeight="143.0" prefWidth="200.0" />
-      <Label layoutX="346.0" layoutY="149.0" text="Location:" textFill="#fc081d" />
-      <ComboBox fx:id="locationCombo" layoutX="411.0" layoutY="145.0" prefWidth="150.0" />
-      <Label fx:id="messageLabel" layoutX="307.0" layoutY="226.0" prefHeight="143.0" prefWidth="277.0" text="Message:" textFill="#fc081d" />
-      <Button layoutX="599.0" layoutY="205.0" mnemonicParsing="false" onAction="#annouceBriefingOnAction" prefHeight="58.0" prefWidth="138.0" text="Announce Briefing" textFill="#fc081d" />
-      <Button layoutX="599.0" layoutY="277.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="58.0" prefWidth="138.0" text="Clear" textFill="#fc081d" />
-      <Button layoutX="585.0" layoutY="417.0" mnemonicParsing="false" onAction="#backToDashBoradOnAction" prefHeight="34.0" prefWidth="166.0" text="Back to Dashborad" textFill="#fc081d" />
+      <Label layoutX="37.0" layoutY="122.0" text="Date:" textFill="#fc081d" />
+      <DatePicker fx:id="briefingDatePicker" layoutX="87.0" layoutY="118.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label layoutX="37.0" layoutY="167.0" text="Time:" textFill="#fc081d" />
+      <Label layoutX="29.0" layoutY="254.0" text="Agenda:" textFill="#fc081d" />
+      <TextArea fx:id="agendaTextArea" layoutX="75.0" layoutY="263.0" prefHeight="133.0" prefWidth="200.0" />
+      <Label layoutX="27.0" layoutY="209.0" prefHeight="26.0" prefWidth="48.0" text="Location:" textFill="#fc081d" />
+      <ComboBox fx:id="locationCombo" layoutX="87.0" layoutY="213.0" prefHeight="26.0" prefWidth="186.0" />
+      <Label fx:id="messageLabel" layoutX="7.0" layoutY="400.0" prefHeight="79.0" prefWidth="562.0" text=" Message:" textFill="#fc081d">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="285.0" layoutY="112.0" mnemonicParsing="false" onAction="#annouceBriefingOnAction" prefHeight="79.0" prefWidth="131.0" text="Announce Briefing" textFill="#fc081d" />
+      <Button layoutX="622.0" layoutY="112.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="79.0" prefWidth="138.0" text="Clear" textFill="#fc081d" />
+      <Button layoutX="582.0" layoutY="422.0" mnemonicParsing="false" onAction="#backToDashBoradOnAction" prefHeight="34.0" prefWidth="166.0" text="Back to Dashborad" textFill="#fc081d" />
+      <ComboBox fx:id="timeCombo" layoutX="86.0" layoutY="162.0" prefHeight="26.0" prefWidth="186.0" />
+      <TableView fx:id="staffBriefingTableView" layoutX="288.0" layoutY="200.0" prefHeight="200.0" prefWidth="474.0">
+        <columns>
+          <TableColumn fx:id="dateCol" prefWidth="122.4000244140625" text="Date" />
+          <TableColumn fx:id="timeCol" prefWidth="106.39999389648438" text="Time" />
+            <TableColumn fx:id="agendaCol" prefWidth="128.0" text="Agenda" />
+            <TableColumn fx:id="locationCol" prefWidth="115.99997558593748" text="Location" />
+        </columns>
+      </TableView>
+      <Label layoutX="438.0" layoutY="162.0" prefHeight="26.0" prefWidth="174.0" text="Existing Announcements " textFill="#fc081d">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

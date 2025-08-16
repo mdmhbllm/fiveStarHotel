@@ -1,19 +1,19 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Policy {
+public class Policy implements Serializable {
     private String policyId;
     private String title;
     private String message;
-    private String referenceLink;
     private LocalDate dateSent;
 
-    public Policy(String policyId, String title, String message, String referenceLink, LocalDate dateSent) {
+    public Policy(String policyId, String title, String message, LocalDate dateSent) {
         this.policyId = policyId;
         this.title = title;
         this.message = message;
-        this.referenceLink = referenceLink;
+
         this.dateSent = dateSent;
     }
 
@@ -41,13 +41,6 @@ public class Policy {
         this.message = message;
     }
 
-    public String getReferenceLink() {
-        return referenceLink;
-    }
-
-    public void setReferenceLink(String referenceLink) {
-        this.referenceLink = referenceLink;
-    }
 
     public LocalDate getDateSent() {
         return dateSent;
@@ -63,7 +56,6 @@ public class Policy {
                 "policyId='" + policyId + '\'' +
                 ", title='" + title + '\'' +
                 ", message='" + message + '\'' +
-                ", referenceLink='" + referenceLink + '\'' +
                 ", dateSent=" + dateSent +
                 '}';
     }

@@ -1,29 +1,20 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Briefing {
-    private String briefingId;
+public class Briefing implements Serializable {
     private LocalDate date;
-    private LocalTime time;
+    private String time;
     private String agenda;
     private String location;
 
-    public Briefing(String briefingId, LocalDate date, LocalTime time, String agenda, String location) {
-        this.briefingId = briefingId;
+    public Briefing(LocalDate date, String time, String agenda, String location) {
         this.date = date;
         this.time = time;
         this.agenda = agenda;
         this.location = location;
-    }
-
-    public String getBriefingId() {
-        return briefingId;
-    }
-
-    public void setBriefingId(String briefingId) {
-        this.briefingId = briefingId;
     }
 
     public LocalDate getDate() {
@@ -34,11 +25,11 @@ public class Briefing {
         this.date = date;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -61,9 +52,8 @@ public class Briefing {
     @Override
     public String toString() {
         return "Briefing{" +
-                "briefingId='" + briefingId + '\'' +
-                ", date=" + date +
-                ", time=" + time +
+                "date=" + date +
+                ", time='" + time + '\'' +
                 ", agenda='" + agenda + '\'' +
                 ", location='" + location + '\'' +
                 '}';

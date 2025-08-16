@@ -1,22 +1,24 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class TraringRequest {
+public class TraringRequest implements Serializable {
+
     private String requestId;
     private String  employeeName;
     private String trainingTitle;
     private LocalDate date;
     private String status;
-    private String rejectionReason;
+    private String type;
 
-    public TraringRequest(String requestId, String employeeName, String trainingTitle, LocalDate date, String status, String rejectionReason) {
+    public TraringRequest(String requestId, String employeeName, String trainingTitle, LocalDate date, String status, String type) {
         this.requestId = requestId;
         this.employeeName = employeeName;
         this.trainingTitle = trainingTitle;
         this.date = date;
         this.status = status;
-        this.rejectionReason = rejectionReason;
+        this.type = type;
     }
 
     public String getRequestId() {
@@ -59,12 +61,12 @@ public class TraringRequest {
         this.status = status;
     }
 
-    public String getRejectionReason() {
-        return rejectionReason;
+    public String getType() {
+        return type;
     }
 
-    public void setRejectionReason(String rejectionReason) {
-        this.rejectionReason = rejectionReason;
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
@@ -75,7 +77,7 @@ public class TraringRequest {
                 ", trainingTitle='" + trainingTitle + '\'' +
                 ", date=" + date +
                 ", status='" + status + '\'' +
-                ", rejectionReason='" + rejectionReason + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

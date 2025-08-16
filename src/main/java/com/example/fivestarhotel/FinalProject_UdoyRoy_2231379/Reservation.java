@@ -1,33 +1,20 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-public class Reservation {
-    private String guestID;
-    private Reservation guest;
+public class Reservation  implements Serializable {
+    private String guest;
     private LocalDate date;
-    private LocalTime time;
+    private String time;
     private int partySize;
-    private Table table;
+    private String table;
     private String specialRequest;
     private String status;
     private int Capacity;
 
-    public int getCapacity() {
-        return Capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        Capacity = capacity;
-    }
-
-    public Reservation(int capacity) {
-        Capacity = capacity;
-    }
-
-    public Reservation(String guestID, Reservation guest, LocalDate date, LocalTime time, int partySize, Table table, String specialRequest, String status) {
-        this.guestID = guestID;
+    public Reservation(String guest, LocalDate date, String time, int partySize, String table, String specialRequest, String status, int capacity) {
         this.guest = guest;
         this.date = date;
         this.time = time;
@@ -35,21 +22,14 @@ public class Reservation {
         this.table = table;
         this.specialRequest = specialRequest;
         this.status = status;
+        Capacity = capacity;
     }
 
-    public String getGuestID() {
-        return guestID;
-    }
-
-    public void setGuestID(String guestID) {
-        this.guestID = guestID;
-    }
-
-    public Reservation getGuest() {
+    public String getGuest() {
         return guest;
     }
 
-    public void setGuest(Reservation guest) {
+    public void setGuest(String guest) {
         this.guest = guest;
     }
 
@@ -61,11 +41,11 @@ public class Reservation {
         this.date = date;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -77,11 +57,11 @@ public class Reservation {
         this.partySize = partySize;
     }
 
-    public Table getTable() {
+    public String getTable() {
         return table;
     }
 
-    public void setTable(Table table) {
+    public void setTable(String table) {
         this.table = table;
     }
 
@@ -101,17 +81,25 @@ public class Reservation {
         this.status = status;
     }
 
+    public int getCapacity() {
+        return Capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        Capacity = capacity;
+    }
+
     @Override
     public String toString() {
-        return "Guest{" +
-                "guestID='" + guestID + '\'' +
-                ", guest=" + guest +
+        return "Reservation{" +
+                "guest='" + guest + '\'' +
                 ", date=" + date +
-                ", time=" + time +
+                ", time='" + time + '\'' +
                 ", partySize=" + partySize +
-                ", table=" + table +
+                ", table='" + table + '\'' +
                 ", specialRequest='" + specialRequest + '\'' +
                 ", status='" + status + '\'' +
+                ", Capacity=" + Capacity +
                 '}';
     }
 }

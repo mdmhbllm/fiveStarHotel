@@ -1,29 +1,36 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Employee {
-    private int employeeId;
+public class Employee implements Serializable {
+    private String employeeId;
     private String name;
     private String department;
     private String role;
     private LocalDate hireDate;
-    private String eligibilityStatus;
+    private String shiftPre;
+    private String DaysAvailable;
+    private LocalDate terminationDate;
+    private String terminationReason;
 
-    public Employee(int employeeId, String name, String department, String role, LocalDate hireDate, String eligibilityStatus) {
+    public Employee(String employeeId, String name, String department, String role, LocalDate hireDate, String shiftPre, String daysAvailable, LocalDate terminationDate, String terminationReason) {
         this.employeeId = employeeId;
         this.name = name;
         this.department = department;
         this.role = role;
         this.hireDate = hireDate;
-        this.eligibilityStatus = eligibilityStatus;
+        this.shiftPre = shiftPre;
+        DaysAvailable = daysAvailable;
+        this.terminationDate = terminationDate;
+        this.terminationReason = terminationReason;
     }
 
-    public int getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(String employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -59,23 +66,50 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public String getEligibilityStatus() {
-        return eligibilityStatus;
+    public String getShiftPre() {
+        return shiftPre;
     }
 
-    public void setEligibilityStatus(String eligibilityStatus) {
-        this.eligibilityStatus = eligibilityStatus;
+    public void setShiftPre(String shiftPre) {
+        this.shiftPre = shiftPre;
+    }
+
+    public String getDaysAvailable() {
+        return DaysAvailable;
+    }
+
+    public void setDaysAvailable(String daysAvailable) {
+        DaysAvailable = daysAvailable;
+    }
+
+    public LocalDate getTerminationDate() {
+        return terminationDate;
+    }
+
+    public void setTerminationDate(LocalDate terminationDate) {
+        this.terminationDate = terminationDate;
+    }
+
+    public String getTerminationReason() {
+        return terminationReason;
+    }
+
+    public void setTerminationReason(String terminationReason) {
+        this.terminationReason = terminationReason;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "employeeId=" + employeeId +
+                "employeeId='" + employeeId + '\'' +
                 ", name='" + name + '\'' +
                 ", department='" + department + '\'' +
                 ", role='" + role + '\'' +
                 ", hireDate=" + hireDate +
-                ", eligibilityStatus='" + eligibilityStatus + '\'' +
+                ", shiftPre='" + shiftPre + '\'' +
+                ", DaysAvailable='" + DaysAvailable + '\'' +
+                ", terminationDate=" + terminationDate +
+                ", terminationReason='" + terminationReason + '\'' +
                 '}';
     }
 }

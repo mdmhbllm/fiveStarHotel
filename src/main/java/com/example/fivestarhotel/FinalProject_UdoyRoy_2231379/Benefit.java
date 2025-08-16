@@ -1,70 +1,72 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Benefit {
-    private String benefitId;
-    private String type;
-    private LocalDate startDate;
-    private String dependents;
-    private String employeeId;
+public class Benefit implements Serializable {
+   private String Name;
+   private String id;
+   private LocalDate Hiredates;
+   private String Department;
+   private String benefitType;
 
-    public Benefit(String benefitId, String type, LocalDate startDate, String dependents, String employeeId) {
-        this.benefitId = benefitId;
-        this.type = type;
-        this.startDate = startDate;
-        this.dependents = dependents;
-        this.employeeId = employeeId;
+
+    public Benefit(String name, String id, LocalDate hiredates, String department, String benefitType) {
+        Name = name;
+        this.id = id;
+        Hiredates = hiredates;
+        Department = department;
+        this.benefitType = benefitType;
     }
 
-    public String getBenefitId() {
-        return benefitId;
+    public String getName() {
+        return Name;
     }
 
-    public void setBenefitId(String benefitId) {
-        this.benefitId = benefitId;
+    public void setName(String name) {
+        Name = name;
     }
 
-    public String getType() {
-        return type;
+    public String getId() {
+        return id;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public LocalDate getStartDate() {
-        return startDate;
+    public LocalDate getHiredates() {
+        return Hiredates;
     }
 
-    public void setStartDate(LocalDate startDate) {
-        this.startDate = startDate;
+    public void setHiredates(LocalDate hiredates) {
+        Hiredates = hiredates;
     }
 
-    public String getDependents() {
-        return dependents;
+    public String getDepartment() {
+        return Department;
     }
 
-    public void setDependents(String dependents) {
-        this.dependents = dependents;
+    public void setDepartment(String department) {
+        Department = department;
     }
 
-    public String getEmployeeId() {
-        return employeeId;
+    public String getBenefitType() {
+        return benefitType;
     }
 
-    public void setEmployeeId(String employeeId) {
-        this.employeeId = employeeId;
+    public void setBenefitType(String benefitType) {
+        this.benefitType = benefitType;
     }
 
     @Override
     public String toString() {
         return "Benefit{" +
-                "benefitId='" + benefitId + '\'' +
-                ", type='" + type + '\'' +
-                ", startDate=" + startDate +
-                ", dependents='" + dependents + '\'' +
-                ", employeeId='" + employeeId + '\'' +
+                "Name='" + Name + '\'' +
+                ", id='" + id + '\'' +
+                ", Hiredates=" + Hiredates +
+                ", Department='" + Department + '\'' +
+                ", benefitType='" + benefitType + '\'' +
                 '}';
     }
 }

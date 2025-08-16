@@ -1,8 +1,9 @@
 package com.example.fivestarhotel.FinalProject_UdoyRoy_2231379;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class LeaveReaquest {
+public class LeaveReaquest implements Serializable {
     private String requestId;
     private LocalDate startDate;
     private LocalDate endDate;

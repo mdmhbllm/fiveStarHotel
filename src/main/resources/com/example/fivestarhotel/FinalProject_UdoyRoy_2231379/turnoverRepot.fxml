@@ -13,10 +13,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="595.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_UdoyRoy_2231379.TurnoverRepotController">
+<AnchorPane prefHeight="595.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cse213.final_project_2231379.TurnoverRepotController">
    <children>
-      <Label layoutY="-2.0" prefHeight="122.0" prefWidth="908.0" style="-fx-background-color: black;" text="                                Employees Turnover Report">
+      <Label layoutY="-2.0" prefHeight="122.0" prefWidth="924.0" style="-fx-background-color: black;" text="                                Employees Turnover Report">
          <font>
             <Font size="31.0" />
          </font>
@@ -47,42 +46,40 @@
             </LinearGradient>
          </textFill>
       </Label>
-      <Label layoutX="64.0" layoutY="169.0" prefHeight="20.0" prefWidth="71.0" text="From Date:" textFill="#ff6600">
+      <Label layoutX="9.0" layoutY="159.0" prefHeight="20.0" prefWidth="53.0" text="Date:" textFill="#ff6600">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="70.0" layoutY="210.0" prefHeight="20.0" prefWidth="59.0" text="To Date:" textFill="#ff6600">
+      <DatePicker fx:id="fromDate" layoutX="89.0" layoutY="152.0" prefHeight="34.0" prefWidth="226.0" />
+      <Label layoutX="9.0" layoutY="223.0" prefHeight="20.0" prefWidth="80.0" text="Department:" textFill="#ff6600">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <DatePicker fx:id="fromDate" layoutX="142.0" layoutY="167.0" prefHeight="26.0" prefWidth="168.0" />
-      <DatePicker fx:id="toDate" layoutX="142.0" layoutY="207.0" prefHeight="26.0" prefWidth="168.0" />
-      <Label layoutX="48.0" layoutY="251.0" prefHeight="20.0" prefWidth="86.0" text="Department:" textFill="#ff6600">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <ComboBox fx:id="departmentCombo" layoutX="142.0" layoutY="248.0" prefHeight="26.0" prefWidth="168.0" />
-      <Button layoutX="596.0" layoutY="144.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="72.0" prefWidth="126.0" text=" Generate Report" textFill="#ff6600" />
-      <Button layoutX="748.0" layoutY="144.0" mnemonicParsing="false" onAction="#exportToPdf" prefHeight="72.0" prefWidth="126.0" text="Export PDF" textFill="#ff6600" />
-      <TableView fx:id="tableView" layoutX="3.0" layoutY="346.0" prefHeight="200.0" prefWidth="909.0">
+      <ComboBox fx:id="departmentCombo" layoutX="89.0" layoutY="209.0" prefHeight="47.0" prefWidth="226.0" />
+      <Button layoutX="332.0" layoutY="146.0" mnemonicParsing="false" onAction="#generateReportOnAction" prefHeight="74.0" prefWidth="126.0" text="Filter" textFill="#ff6600" />
+      <TableView fx:id="tableView" layoutY="338.0" prefHeight="200.0" prefWidth="917.0">
         <columns>
-          <TableColumn fx:id="idCol" prefWidth="118.3999924659729" text="ID" />
-            <TableColumn fx:id="nameCol" prefWidth="195.19998931884766" text="Name" />
-            <TableColumn fx:id="departmentCol" prefWidth="228.79995727539062" text="Department" />
-            <TableColumn fx:id="leftDateCol" prefWidth="183.2000732421875" text="Left Date" />
-          <TableColumn fx:id="reasonCol" prefWidth="187.199951171875" text="Reason" />
+          <TableColumn fx:id="idCol" prefWidth="116.00000154972076" text="ID" />
+            <TableColumn fx:id="nameCol" prefWidth="159.20000457763672" text="Name" />
+            <TableColumn fx:id="departmentCol" prefWidth="218.39996337890625" text="Department" />
+            <TableColumn fx:id="leftDateCol" prefWidth="146.40005493164062" text=" Date" />
+          <TableColumn fx:id="reasonCol" minWidth="0.79998779296875" prefWidth="283.199951171875" text="Reason" />
         </columns>
       </TableView>
       <Button layoutX="748.0" layoutY="554.0" mnemonicParsing="false" onAction="#backtoDashboradOnAction" prefHeight="33.0" prefWidth="150.0" text="Back TO Dashborad" textFill="#ff6600" />
-      <Button layoutX="672.0" layoutY="238.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="72.0" prefWidth="126.0" text="Clear" textFill="#ff6600" />
-      <Label fx:id="messageLabel" layoutX="42.0" layoutY="283.0" prefHeight="47.0" prefWidth="275.0" text="Message:" textFill="#ff6600">
+      <Button layoutX="332.0" layoutY="252.0" mnemonicParsing="false" onAction="#clearOnAction" prefHeight="62.0" prefWidth="126.0" text="Clear" textFill="#ff6600" />
+      <Label fx:id="messageLabel" layoutX="9.0" layoutY="268.0" prefHeight="62.0" prefWidth="309.0" text="Message:" textFill="#ff6600">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Line endX="30.79998779296875" endY="-21.0" layoutX="430.0" layoutY="167.0" startX="30.79998779296875" startY="147.0" />
+      <Line endX="95.60003662109375" endY="-28.20001220703125" layoutX="442.0" layoutY="167.0" startX="95.60003662109375" startY="153.39999389648438" />
+      <Button layoutX="629.0" layoutY="146.0" mnemonicParsing="false" onAction="#viewDateOnAction" prefHeight="110.0" prefWidth="217.0" text="View Data" textFill="#ff6600">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

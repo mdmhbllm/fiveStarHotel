@@ -8,20 +8,18 @@ public class TrainingSession {
     private String sessionId;
     private String topic;
     private LocalDate date;
-    private LocalTime time;
+    private String time;
     private String venue;
-    private Staff trainer;
-    private List<Staff> attendees;
+    private String trainer;
 
 
-    public TrainingSession(String sessionId, String topic, LocalDate date, LocalTime time, String venue, Staff trainer, List<Staff> attendees) {
+    public TrainingSession(String sessionId, String topic, LocalDate date, String time, String venue, String trainer) {
         this.sessionId = sessionId;
         this.topic = topic;
         this.date = date;
         this.time = time;
         this.venue = venue;
         this.trainer = trainer;
-        this.attendees = attendees;
     }
 
     public String getSessionId() {
@@ -48,11 +46,11 @@ public class TrainingSession {
         this.date = date;
     }
 
-    public LocalTime getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(LocalTime time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
@@ -64,20 +62,12 @@ public class TrainingSession {
         this.venue = venue;
     }
 
-    public Staff getTrainer() {
+    public String getTrainer() {
         return trainer;
     }
 
-    public void setTrainer(Staff trainer) {
+    public void setTrainer(String trainer) {
         this.trainer = trainer;
-    }
-
-    public List<Staff> getAttendees() {
-        return attendees;
-    }
-
-    public void setAttendees(List<Staff> attendees) {
-        this.attendees = attendees;
     }
 
     @Override
@@ -86,10 +76,9 @@ public class TrainingSession {
                 "sessionId='" + sessionId + '\'' +
                 ", topic='" + topic + '\'' +
                 ", date=" + date +
-                ", time=" + time +
+                ", time='" + time + '\'' +
                 ", venue='" + venue + '\'' +
-                ", trainer=" + trainer +
-                ", attendees=" + attendees +
+                ", trainer='" + trainer + '\'' +
                 '}';
     }
 }

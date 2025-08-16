@@ -7,15 +7,19 @@ public class SalesReport {
     private String reportId;
     private LocalDate startDate;
     private LocalDate endDate;
+    private float totalAmount;
+    private String itemSold;
+    private String paymentMethod;
     private String category;
-    private List<Sales> salesData;
 
-    public SalesReport(String reportId, LocalDate startDate, LocalDate endDate, String category, List<Sales> salesData) {
+    public SalesReport(String reportId, LocalDate startDate, LocalDate endDate, float totalAmount, String itemSold, String paymentMethod, String category) {
         this.reportId = reportId;
         this.startDate = startDate;
         this.endDate = endDate;
+        this.totalAmount = totalAmount;
+        this.itemSold = itemSold;
+        this.paymentMethod = paymentMethod;
         this.category = category;
-        this.salesData = salesData;
     }
 
     public String getReportId() {
@@ -42,6 +46,30 @@ public class SalesReport {
         this.endDate = endDate;
     }
 
+    public float getTotalAmount() {
+        return totalAmount;
+    }
+
+    public void setTotalAmount(float totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    public String getItemSold() {
+        return itemSold;
+    }
+
+    public void setItemSold(String itemSold) {
+        this.itemSold = itemSold;
+    }
+
+    public String getPaymentMethod() {
+        return paymentMethod;
+    }
+
+    public void setPaymentMethod(String paymentMethod) {
+        this.paymentMethod = paymentMethod;
+    }
+
     public String getCategory() {
         return category;
     }
@@ -50,22 +78,16 @@ public class SalesReport {
         this.category = category;
     }
 
-    public List<Sales> getSalesData() {
-        return salesData;
-    }
-
-    public void setSalesData(List<Sales> salesData) {
-        this.salesData = salesData;
-    }
-
     @Override
     public String toString() {
         return "SalesReport{" +
                 "reportId='" + reportId + '\'' +
                 ", startDate=" + startDate +
                 ", endDate=" + endDate +
+                ", totalAmount=" + totalAmount +
+                ", itemSold='" + itemSold + '\'' +
+                ", paymentMethod='" + paymentMethod + '\'' +
                 ", category='" + category + '\'' +
-                ", salesData=" + salesData +
                 '}';
     }
 }
