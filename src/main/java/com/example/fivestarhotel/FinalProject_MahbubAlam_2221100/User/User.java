@@ -1,12 +1,14 @@
-package com.example.fivestarhotel;
+package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.User;
 
-public abstract class User {
-    private String name;
-    private String email;
-    private String password;
-    private String phoneNumber;
-    private String userType;
-    private String userId;
+import java.io.Serializable;
+
+public abstract class User implements Serializable{
+    protected String name;
+    protected String email;
+    protected String password;
+    protected String phoneNumber;
+    protected String userType;
+    protected String userId;
 
     public User(String name, String email, String password, String phoneNumber, String userId, String userType) {
         this.name = name;
@@ -21,7 +23,7 @@ public abstract class User {
     public abstract void logout();
     public abstract void viewDashBoard();
     public abstract boolean changePassword(String oldPassword, String newPassword, String confirmPassword);
-    public abstract boolean updateProfile();
+    public abstract void updateProfile(String email, String phoneNumber);
 
     public String getName() {
         return name; }

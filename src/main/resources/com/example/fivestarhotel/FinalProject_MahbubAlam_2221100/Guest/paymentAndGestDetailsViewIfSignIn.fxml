@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -13,50 +12,23 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="836.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="836.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.paymentAndGestDetailsIfSignInController">
     <children>
         <HBox layoutX="-1.0" layoutY="-1.0" prefHeight="78.0" prefWidth="822.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel">
                     <font>
                         <Font size="60.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="450.0" />
+                        <Insets right="400.0" />
                     </HBox.margin>
                 </Text>
-                <Button layoutX="273.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="User Name">
+                <Button fx:id="userNameDisPlay" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onAction="#userProfileOnAction" prefHeight="26.0" prefWidth="84.0" text="User Name">
                     <HBox.margin>
                         <Insets top="20.0" />
                     </HBox.margin>
                 </Button>
-            </children>
-        </HBox>
-        <HBox layoutY="77.0" prefHeight="71.0" prefWidth="822.0">
-            <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Stay">
-                    <font>
-                        <Font size="21.0" />
-                    </font>
-                    <HBox.margin>
-                        <Insets left="100.0" right="40.0" top="20.0" />
-                    </HBox.margin>
-                </Text>
-                <Label prefHeight="29.0" prefWidth="141.0" text="Name Of Hotel">
-                    <HBox.margin>
-                        <Insets right="20.0" top="20.0" />
-                    </HBox.margin>
-                </Label>
-                <Label layoutX="80.0" layoutY="10.0" prefHeight="29.0" prefWidth="141.0" text="Time Of Stay">
-                    <HBox.margin>
-                        <Insets right="20.0" top="20.0" />
-                    </HBox.margin>
-                </Label>
-                <Label layoutX="221.0" layoutY="10.0" prefHeight="27.0" prefWidth="141.0" text="Guest and Room">
-                    <HBox.margin>
-                        <Insets right="20.0" top="20.0" />
-                    </HBox.margin>
-                </Label>
             </children>
         </HBox>
         <Label layoutX="14.0" layoutY="148.0" prefHeight="51.0" prefWidth="477.0" text="Payment  and Guest Details">
@@ -84,7 +56,7 @@
                 </VBox>
                 <VBox prefHeight="100.0" prefWidth="121.0">
                     <children>
-                        <Label prefHeight="26.0" prefWidth="84.0" text="Price">
+                        <Label fx:id="roomPriceToBook" prefHeight="26.0" prefWidth="84.0" text="Price">
                             <VBox.margin>
                                 <Insets top="20.0" />
                             </VBox.margin>
@@ -109,7 +81,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="15.0" layoutY="407.0" prefHeight="26.0" prefWidth="295.0" />
+        <TextField fx:id="cardNumberTextField" layoutX="15.0" layoutY="407.0" prefHeight="26.0" prefWidth="295.0" />
         <Label layoutX="14.0" layoutY="443.0" prefHeight="17.0" prefWidth="108.0" text="Month">
             <font>
                 <Font size="14.0" />
@@ -120,8 +92,6 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <DatePicker layoutX="15.0" layoutY="464.0" prefHeight="26.0" prefWidth="131.0" />
-        <DatePicker layoutX="177.0" layoutY="464.0" prefHeight="26.0" prefWidth="131.0" />
         <Label layoutX="14.0" layoutY="524.0" prefHeight="35.0" prefWidth="158.0" text="Guest Information">
             <font>
                 <Font size="20.0" />
@@ -133,7 +103,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="15.0" layoutY="591.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="guestFirstNameTextField" layoutX="15.0" layoutY="591.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="308.0" layoutY="565.0" prefHeight="17.0" prefWidth="108.0" text="Last Name">
             <font>
                 <Font size="14.0" />
@@ -144,38 +114,45 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="308.0" layoutY="591.0" prefHeight="26.0" prefWidth="176.0" />
-        <TextField layoutX="595.0" layoutY="591.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="lastNameTextField" layoutX="308.0" layoutY="591.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="emailTextField" layoutX="595.0" layoutY="591.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="14.0" layoutY="630.0" prefHeight="17.0" prefWidth="108.0" text="Phone">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="15.0" layoutY="655.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="phoneTextField" layoutX="15.0" layoutY="655.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="308.0" layoutY="630.0" prefHeight="17.0" prefWidth="108.0" text="Country">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <ComboBox layoutX="308.0" layoutY="656.0" prefHeight="26.0" prefWidth="176.0" />
+        <ComboBox fx:id="countrySelectionCombobox" layoutX="308.0" layoutY="656.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="595.0" layoutY="630.0" prefHeight="17.0" prefWidth="108.0" text="Address">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="595.0" layoutY="656.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="addressTextField" layoutX="595.0" layoutY="656.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="14.0" layoutY="691.0" prefHeight="17.0" prefWidth="108.0" text="City">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="15.0" layoutY="716.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="cityTextField" layoutX="15.0" layoutY="716.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="308.0" layoutY="691.0" prefHeight="17.0" prefWidth="108.0" text="Zip">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="308.0" layoutY="718.0" prefHeight="26.0" prefWidth="176.0" />
-        <Button layoutX="215.0" layoutY="774.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="387.0" text="Book Reservation" />
+        <TextField fx:id="zipCodeTextField" layoutX="308.0" layoutY="718.0" prefHeight="26.0" prefWidth="176.0" />
+        <Button layoutX="589.0" layoutY="712.0" mnemonicParsing="false" onAction="#bookReservationOnAction" prefHeight="35.0" prefWidth="188.0" text="Book Reservation" />
+      <Label fx:id="roomIdToBook" layoutX="339.0" layoutY="105.0" prefHeight="17.0" prefWidth="158.0" text="Label">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cardMonthDateTexrField" layoutX="14.0" layoutY="464.0" prefHeight="26.0" prefWidth="108.0" />
+      <TextField fx:id="cardYearDateTextField" layoutX="177.0" layoutY="464.0" prefHeight="26.0" prefWidth="108.0" />
     </children>
 </AnchorPane>

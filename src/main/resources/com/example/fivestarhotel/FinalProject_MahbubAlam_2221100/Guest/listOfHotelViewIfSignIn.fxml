@@ -10,17 +10,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.ListOfHotelIfSignInController">
     <children>
-        <Text layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC" wrappingWidth="252.21630859375">
+        <Text layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel" wrappingWidth="252.21630859375">
             <font>
                 <Font size="45.0" />
             </font>
         </Text>
-        <Button layoutX="659.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="145.0" text="User  name" />
+        <Button fx:id="userNameDisplay" layoutX="659.0" layoutY="14.0" mnemonicParsing="false" onAction="#userProfileOnAction" prefHeight="26.0" prefWidth="145.0" text="User  name" />
         <HBox layoutY="84.0" prefHeight="100.0" prefWidth="834.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Search" textAlignment="CENTER" wrappingWidth="138.21630859375">
+                <Text fx:id="yourSearchLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Search" textAlignment="CENTER" wrappingWidth="138.21630859375">
                     <font>
                         <Font size="20.0" />
                     </font>
@@ -28,34 +28,35 @@
                         <Insets bottom="10.0" left="40.0" top="20.0" />
                     </HBox.margin>
                 </Text>
-                <Label prefHeight="26.0" prefWidth="110.0" text="Destination" textAlignment="CENTER">
+                <Label fx:id="DestinationLabel" prefHeight="26.0" prefWidth="110.0" text="Destination" textAlignment="CENTER">
                     <HBox.margin>
                         <Insets bottom="10.0" left="40.0" top="20.0" />
                     </HBox.margin>
                 </Label>
-                <Label prefHeight="26.0" prefWidth="173.0" text="Date Of Stay" textAlignment="CENTER">
+                <Label fx:id="DateOfStayLabel" prefHeight="26.0" prefWidth="173.0" text="Date Of Stay" textAlignment="CENTER">
                     <HBox.margin>
                         <Insets bottom="10.0" left="40.0" top="20.0" />
                     </HBox.margin>
                 </Label>
-                <Label prefHeight="26.0" prefWidth="110.0" text="Room and Guest" textAlignment="CENTER">
+                <Label fx:id="roomAndGuestNoLabel" prefHeight="26.0" prefWidth="110.0" text="Room and Guest" textAlignment="CENTER">
                     <HBox.margin>
                         <Insets bottom="10.0" left="40.0" top="20.0" />
                     </HBox.margin>
                 </Label>
-                <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Edit Search" textAlignment="CENTER">
+                <Button mnemonicParsing="false" onAction="#editSearchLabel" prefHeight="26.0" prefWidth="80.0" text="Edit Search" textAlignment="CENTER">
                     <HBox.margin>
                         <Insets bottom="10.0" left="40.0" top="20.0" />
                     </HBox.margin>
                 </Button>
             </children>
         </HBox>
-        <TableView layoutX="15.0" layoutY="184.0" prefHeight="467.0" prefWidth="804.0">
+        <TableView fx:id="mainTable" layoutX="15.0" layoutY="184.0" prefHeight="467.0" prefWidth="804.0">
             <columns>
-                <TableColumn prefWidth="300.0" text="Hotel Name" />
-                <TableColumn prefWidth="188.0" text="Average Room Price" />
-                <TableColumn prefWidth="176.0" text="Availability status" />
-                <TableColumn prefWidth="139.0" text="View Rate" />
+                <TableColumn fx:id="hotellNameCol" prefWidth="181.0" text="Hotel Name" />
+                <TableColumn fx:id="AverageRoomPriceCol" prefWidth="200.0" text="Average Room Price" />
+                <TableColumn fx:id="AvailabilityStatusCol" prefWidth="164.0" text="Availability status" />
+                <TableColumn fx:id="locationCol" prefWidth="155.0" text="Loacation" />
+            <TableColumn fx:id="ViewRateCol" prefWidth="102.0" text="View Rate" />
             </columns>
         </TableView>
     </children>

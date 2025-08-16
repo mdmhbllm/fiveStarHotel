@@ -11,19 +11,19 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="648.0" prefWidth="822.0" type="AnchorPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.ManageAccountController">
     <children>
         <HBox layoutX="-1.0" layoutY="-1.0" prefHeight="78.0" prefWidth="822.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel">
                     <font>
                         <Font size="60.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="460.0" />
+                        <Insets right="400.0" />
                     </HBox.margin>
                 </Text>
-                <Button layoutX="273.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0" text="User Name">
+                <Button fx:id="userNameDisplay" layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onAction="#userProfileOnAction" prefHeight="26.0" prefWidth="117.0" text="User Name">
                     <HBox.margin>
                         <Insets top="20.0" />
                     </HBox.margin>
@@ -41,7 +41,7 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="34.0" layoutY="207.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="firstNameTextField" layoutX="34.0" layoutY="207.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="315.0" layoutY="177.0" prefHeight="17.0" prefWidth="108.0" text="Last Name">
             <font>
                 <Font size="14.0" />
@@ -52,38 +52,38 @@
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="315.0" layoutY="207.0" prefHeight="26.0" prefWidth="176.0" />
-        <TextField layoutX="602.0" layoutY="207.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="lastNameTextField" layoutX="315.0" layoutY="207.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="emailTextField" layoutX="602.0" layoutY="207.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="34.0" layoutY="260.0" prefHeight="17.0" prefWidth="108.0" text="Phone">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="34.0" layoutY="288.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="phoneTextField" layoutX="34.0" layoutY="288.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="315.0" layoutY="260.0" prefHeight="17.0" prefWidth="108.0" text="Country">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <ComboBox layoutX="315.0" layoutY="288.0" prefHeight="26.0" prefWidth="176.0" />
+        <ComboBox fx:id="countryComboBox" layoutX="315.0" layoutY="288.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="602.0" layoutY="260.0" prefHeight="17.0" prefWidth="108.0" text="Address">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="602.0" layoutY="288.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="addressTextField" layoutX="602.0" layoutY="288.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="34.0" layoutY="345.0" prefHeight="17.0" prefWidth="108.0" text="City">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="34.0" layoutY="383.0" prefHeight="26.0" prefWidth="176.0" />
+        <TextField fx:id="cityTextField" layoutX="34.0" layoutY="383.0" prefHeight="26.0" prefWidth="176.0" />
         <Label layoutX="315.0" layoutY="354.0" prefHeight="17.0" prefWidth="108.0" text="Zip">
             <font>
                 <Font size="14.0" />
             </font>
         </Label>
-        <TextField layoutX="315.0" layoutY="383.0" prefHeight="26.0" prefWidth="176.0" />
-      <Button layoutX="171.0" layoutY="490.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="506.0" text="Save " />
+        <TextField fx:id="zipTextField" layoutX="315.0" layoutY="383.0" prefHeight="26.0" prefWidth="176.0" />
+      <Button layoutX="171.0" layoutY="490.0" mnemonicParsing="false" onAction="#saveOnAction" prefHeight="26.0" prefWidth="506.0" text="Save " />
     </children>
-</AnchorPane>
+</fx:root>

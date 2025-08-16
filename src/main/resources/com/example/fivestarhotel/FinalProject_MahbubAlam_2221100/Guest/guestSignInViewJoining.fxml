@@ -10,11 +10,11 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="652.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.GuestSignInViewJoiningController">
    <children>
       <HBox layoutX="4.0" prefHeight="78.0" prefWidth="830.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel">
                <font>
                   <Font size="60.0" />
                </font>
@@ -22,12 +22,12 @@
                   <Insets right="350.0" />
                </HBox.margin>
             </Text>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="72.0" text="Join">
+            <Button mnemonicParsing="false" onAction="#joinOnAction" prefHeight="26.0" prefWidth="72.0" text="Join">
                <HBox.margin>
                   <Insets right="35.0" top="20.0" />
                </HBox.margin>
             </Button>
-            <Button layoutX="273.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="70.0" text="Sign In">
+            <Button layoutX="273.0" layoutY="10.0" mnemonicParsing="false" onAction="#sisignInOnAction" prefHeight="26.0" prefWidth="70.0" text="Sign In">
                <HBox.margin>
                   <Insets top="20.0" />
                </HBox.margin>
@@ -40,7 +40,7 @@
             <Font name="System Bold" size="40.0" />
          </font>
       </Label>
-      <Label layoutX="233.0" layoutY="110.0" prefHeight="51.0" prefWidth="212.0" text="Name">
+      <Label fx:id="memberNameDisplay" layoutX="233.0" layoutY="110.0" prefHeight="51.0" prefWidth="212.0" text="Name">
          <font>
             <Font name="System Bold" size="40.0" />
          </font>
@@ -50,7 +50,7 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Label layoutX="604.0" layoutY="110.0" prefHeight="27.0" prefWidth="212.0" text="Id Number">
+      <Label fx:id="memberIdNumberDisplay" layoutX="604.0" layoutY="110.0" prefHeight="27.0" prefWidth="212.0" text="Id Number">
          <font>
             <Font size="21.0" />
          </font>
@@ -70,18 +70,18 @@
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="291.0" layoutY="342.0" prefHeight="27.0" prefWidth="162.0" text="User name or member id">
+      <Label layoutX="291.0" layoutY="342.0" prefHeight="27.0" prefWidth="162.0" text="Member id">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="291.0" layoutY="376.0" prefHeight="26.0" prefWidth="303.0" />
+      <TextField fx:id="memberIDTextField" layoutX="291.0" layoutY="376.0" prefHeight="26.0" prefWidth="303.0" />
       <Label layoutX="291.0" layoutY="420.0" prefHeight="27.0" prefWidth="162.0" text="Password">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </Label>
-      <TextField layoutX="291.0" layoutY="453.0" prefHeight="26.0" prefWidth="303.0" />
-      <Button layoutX="387.0" layoutY="504.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="86.0" text="Sign In" />
+      <TextField fx:id="passwordTextField" layoutX="291.0" layoutY="453.0" prefHeight="26.0" prefWidth="303.0" />
+      <Button layoutX="387.0" layoutY="504.0" mnemonicParsing="false" onAction="#memberSignInOnAction" prefHeight="26.0" prefWidth="86.0" text="Sign In" />
    </children>
 </AnchorPane>

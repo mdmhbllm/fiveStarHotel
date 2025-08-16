@@ -12,14 +12,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="669.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.ListOfHotelIfNotSignInController">
    <children>
-      <Text layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC" wrappingWidth="252.21630859375">
+      <Text layoutX="7.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel" wrappingWidth="252.21630859375">
          <font>
             <Font size="45.0" />
          </font>
       </Text>
       <Button layoutX="623.0" layoutY="14.0" mnemonicParsing="false" onAction="#joinOnAction" prefHeight="26.0" prefWidth="65.0" text="Join" />
       <Button layoutX="737.0" layoutY="14.0" mnemonicParsing="false" onAction="#signInOnAction" prefHeight="26.0" prefWidth="65.0" text="Sign In" />
-      <HBox layoutY="84.0" prefHeight="100.0" prefWidth="834.0">
+      <HBox layoutY="110.0" prefHeight="74.0" prefWidth="834.0">
          <children>
             <Text fx:id="yourSearchLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Search" textAlignment="CENTER" wrappingWidth="138.21630859375">
                <font>
@@ -44,7 +44,7 @@
                   <Insets bottom="10.0" left="40.0" top="20.0" />
                </HBox.margin>
             </Label>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="80.0" text="Edit Search" textAlignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#editSearchLabel" prefHeight="26.0" prefWidth="80.0" text="Edit Search" textAlignment="CENTER">
                <HBox.margin>
                   <Insets bottom="10.0" left="40.0" top="20.0" />
                </HBox.margin>
@@ -53,11 +53,15 @@
       </HBox>
       <TableView fx:id="mainTable" layoutX="15.0" layoutY="184.0" prefHeight="467.0" prefWidth="804.0">
         <columns>
-          <TableColumn fx:id="hotellNameCol" prefWidth="300.0" text="Hotel Name" />
-          <TableColumn fx:id="AverageRoomPriceCol" prefWidth="188.0" text="Average Room Price" />
-            <TableColumn fx:id="AvailabilityStatusCol" prefWidth="176.0" text="Availability status" />
-            <TableColumn fx:id="ViewRateCol" prefWidth="139.0" text="View Rate" />
+          <TableColumn fx:id="hotellNameCol" prefWidth="203.0" text="Hotel Name" />
+          <TableColumn fx:id="AverageRoomPriceCol" prefWidth="167.0" text="Average Room Price" />
+            <TableColumn fx:id="AvailabilityStatusCol" prefWidth="174.0" text="Availability status" />
+            <TableColumn fx:id="locationCol" prefWidth="127.0" text="Location" />
+            <TableColumn fx:id="ViewRateCol" prefWidth="128.0" text="View Rate" />
         </columns>
       </TableView>
+      <Label fx:id="DestinationLabel1" layoutX="217.0" layoutY="93.0" prefHeight="26.0" prefWidth="110.0" text="Destination" textAlignment="CENTER" />
+      <Label fx:id="DateOfStayLabel1" layoutX="367.0" layoutY="93.0" prefHeight="26.0" prefWidth="173.0" text="Date Of Stay" textAlignment="CENTER" />
+      <Label fx:id="DateOfStayLabel11" layoutX="579.0" layoutY="93.0" prefHeight="26.0" prefWidth="129.0" text="Room and Guest" textAlignment="CENTER" />
    </children>
 </AnchorPane>

@@ -1,21 +1,33 @@
 package com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest;
 
-import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.HotelInformation;
+import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.Hotel;
+import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.HotelViewRowSetting;
+import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Hotel.Room;
+import com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Utility.DataManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import static javafx.application.Application.launch;
 
 public class ListOfHotelIfNotSignInController {
 
     @FXML
-    private TableColumn<HotelInformation, String> AvailabilityStatusCol;
+    private TableColumn<HotelViewRowSetting, String> AvailabilityStatusCol;
 
     @FXML
-    private TableColumn<HotelInformation, Integer> AverageRoomPriceCol;
+    private TableColumn<HotelViewRowSetting, Integer> AverageRoomPriceCol;
 
     @FXML
     private Label DateOfStayLabel;
@@ -24,67 +36,110 @@ public class ListOfHotelIfNotSignInController {
     private Label DestinationLabel;
 
     @FXML
-    private TableColumn<HotelInformation, Void> ViewRateCol;
+    private TableColumn<HotelViewRowSetting, Button> ViewRateCol;
 
     @FXML
-    private TableColumn<HotelInformation, String> hotellNameCol;
+    private TableColumn<HotelViewRowSetting, String> hotellNameCol;
 
     @FXML
-    private TableView<HotelInformation> mainTable;
+    private TableView<HotelViewRowSetting> mainTable;
 
     @FXML
     private Label roomAndGuestNoLabel;
 
     @FXML
     private Text yourSearchLabel;
+    @FXML
+    private TableColumn<HotelViewRowSetting, String> locationCol;
+    List<Hotel> allHotels = new ArrayList<>();
 
     @FXML
-    public void initialize(){
+    public void initialize() throws IOException {
         hotellNameCol.setCellValueFactory(new PropertyValueFactory<>("hotelName"));
         AverageRoomPriceCol.setCellValueFactory(new PropertyValueFactory<>("averageRoomPrice"));
         AvailabilityStatusCol.setCellValueFactory(new PropertyValueFactory<>("availabilityStatus"));
-        addButtonToViewRateColumn();
+        locationCol.setCellValueFactory(new PropertyValueFactory<>("location"));
+        ViewRateCol.setCellValueFactory(new PropertyValueFactory<>("actionButton"));
 
-        mainTable.getItems().addAll(
-                new HotelInformation("Hotel Sunshine", 120, "Available"),
-                new HotelInformation("Grand Plaza", 200, "Booked"),
-                new HotelInformation("Elite Stay", 150, "Available")
-        );
+
+        allHotels.add(new Hotel("Radisson Blu Dhaka", 133, "Available", "Dhaka"));
+        allHotels.add(new Hotel("Pan Pacific Sonargaon", 196, "Available", "Dhaka"));
     }
 
-    private void addButtonToViewRateColumn() {
-        ViewRateCol.setCellFactory(col -> new TableCell<>() {
-            private final Button btn = new Button("Selected");
 
-            {
-                btn.setOnAction((ActionEvent event) -> {
-                    HotelInformation hotelInfo = getTableView().getItems().get(getIndex());
-                    System.out.println("Selected Hotel: " + hotelInfo.getHotelName());
-                    // You can perform any action with 'hotelInfo' here (like open a new scene, etc.)
-                });
+    @FXML
+    public void recieveInfoFromGuestControllerIfNotSignIn(String destination, LocalDate checkInDate, String roomCount, String guestCount) throws IOException {
+        DestinationLabel.setText(destination);
+        DateOfStayLabel.setText(String.valueOf(checkInDate));
+        roomAndGuestNoLabel.setText(roomCount+",  "+ guestCount);
+
+        List<HotelViewRowSetting> guestSearchedHotel = new ArrayList<>();
+        for (Hotel hotel : allHotels) {
+            if (hotel.getLocation().equals(DestinationLabel.getText())) {
+                HotelViewRowSetting row = new HotelViewRowSetting(hotel);
+                setButtonAction(row);
+                guestSearchedHotel.add(row);
+            }
+        }
+
+        for (Hotel hotel: allHotels){
+            DataManager.saveObject(hotel, "Hotel.bin");
+        }
+
+        mainTable.getItems().clear();
+        mainTable.getItems().addAll(guestSearchedHotel);
+    }
+
+    private void setButtonAction(HotelViewRowSetting row) {
+        row.getActionButton().setOnAction(e -> {
+            String fxmlFile = "";
+
+            if (row.getHotelName().equals("Radisson Blu Dhaka")) {
+                fxmlFile = "/com/example/fivestarhotel/FinalProject_MahbubAlam_2221100/Guest/radissonViewIfNotSignIn.fxml";
+            } else if (row.getHotelName().equals("Pan Pacific Sonargaon")) {
+                fxmlFile = "/com/example/fivestarhotel/FinalProject_MahbubAlam_2221100/Guest/panPacificViewIfNotSignIn.fxml";
             }
 
-            @Override
-            protected void updateItem(Void item, boolean empty) {
-                super.updateItem(item, empty);
-                if (empty) {
-                    setGraphic(null);
-                } else {
-                    setGraphic(btn);
-                }
+            FXMLLoader fxmlLoader = new FXMLLoader(GuestControllerIfNotSignIn.class.getResource(fxmlFile));
+            Scene scene = null;
+            try {
+                scene = new Scene(fxmlLoader.load());
+            } catch (IOException ex) {
+                throw new RuntimeException(ex);
             }
+            Stage newStage = new Stage();
+            newStage.setScene(scene);
+            newStage.show();
         });
     }
 
 
     @FXML
-    public void joinOnAction(ActionEvent event) {
+    public void joinOnAction(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(GuestControllerIfNotSignIn.class.getResource("joinView.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage newStage = new Stage();
+        newStage.setScene(scene);
+        newStage.show();
+    }
+
+    @FXML
+    public void signInOnAction(ActionEvent event) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(GuestControllerIfNotSignIn.class.getResource("guestSignInViewIfJoined.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage newStage = new Stage();
+        newStage.setScene(scene);
+        newStage.show();
 
     }
 
     @FXML
-    public void signInOnAction(ActionEvent event) {
-
+    public void editSearchLabel(ActionEvent actionEvent) throws IOException {
+        FXMLLoader loader = new FXMLLoader(GuestControllerIfNotSignIn.class.getResource("guestViewIfNotSignIn.fxml"));
+        Scene scene = new Scene(loader.load());
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

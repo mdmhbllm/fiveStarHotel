@@ -9,30 +9,31 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.Guest.GuestControllerIfNotSignIn">
    <children>
-      <Button layoutX="625.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Join" />
+      <Button layoutX="625.0" layoutY="14.0" mnemonicParsing="false" onAction="#joinHotelOnAction" prefHeight="26.0" prefWidth="97.0" text="Join" />
       <Label layoutX="16.0" layoutY="110.0" prefHeight="44.0" prefWidth="213.0" text="Where to? (Required)">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <TextField layoutX="14.0" layoutY="153.0" prefHeight="36.0" prefWidth="245.0" promptText="Destination" />
-      <DatePicker layoutX="297.0" layoutY="153.0" prefHeight="36.0" prefWidth="125.0" promptText="Check In" />
-      <DatePicker layoutX="434.0" layoutY="153.0" prefHeight="36.0" prefWidth="125.0" promptText="Check Out" />
+      <TextField fx:id="searchInput" layoutX="14.0" layoutY="153.0" prefHeight="36.0" prefWidth="245.0" promptText=" City" />
+      <DatePicker fx:id="checInDate" layoutX="297.0" layoutY="153.0" prefHeight="36.0" prefWidth="125.0" promptText="Check In" />
+      <DatePicker fx:id="checkOutDate" layoutX="434.0" layoutY="153.0" prefHeight="36.0" prefWidth="125.0" promptText="Check Out" />
       <Label layoutX="301.0" layoutY="110.0" prefHeight="44.0" prefWidth="213.0" text="When?">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <ComboBox layoutX="567.0" layoutY="153.0" prefHeight="36.0" prefWidth="97.0" promptText="Guest" />
-      <ComboBox layoutX="673.0" layoutY="153.0" prefHeight="36.0" prefWidth="97.0" promptText="Room" />
-      <Button layoutX="775.0" layoutY="153.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="86.0" text="Find a hotel" />
-      <Button layoutX="747.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="Sign In" />
-      <Text layoutX="9.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC" wrappingWidth="226.21630859375">
+      <ComboBox fx:id="numberOfGuestCombobox" layoutX="567.0" layoutY="153.0" prefHeight="36.0" prefWidth="97.0" promptText="Guest" />
+      <ComboBox fx:id="roomNUmberCombobox" layoutX="673.0" layoutY="153.0" prefHeight="36.0" prefWidth="97.0" promptText="Room" />
+      <Button layoutX="775.0" layoutY="153.0" mnemonicParsing="false" onAction="#searchOnAction" prefHeight="36.0" prefWidth="86.0" text="Find a hotel" />
+      <Button layoutX="747.0" layoutY="14.0" mnemonicParsing="false" onAction="#signInOnAction" prefHeight="26.0" prefWidth="97.0" text="Sign In" />
+      <Text layoutX="9.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel" wrappingWidth="226.21630859375">
          <font>
             <Font size="39.0" />
          </font>
       </Text>
+      <Label fx:id="massage" layoutX="625.0" layoutY="72.0" prefHeight="36.0" prefWidth="220.0" />
    </children>
 </AnchorPane>

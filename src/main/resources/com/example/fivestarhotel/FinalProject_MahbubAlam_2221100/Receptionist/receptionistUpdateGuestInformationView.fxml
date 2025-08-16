@@ -13,24 +13,24 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="836.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <HBox layoutX="-1.0" layoutY="-1.0" prefHeight="78.0" prefWidth="822.0">
+        <HBox layoutX="-1.0" layoutY="-1.0" prefHeight="99.0" prefWidth="822.0">
             <children>
-                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC">
+                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel">
                     <font>
                         <Font size="60.0" />
                     </font>
                     <HBox.margin>
-                        <Insets right="350.0" />
+                        <Insets right="300.0" />
                     </HBox.margin>
                 </Text>
-                <Button layoutX="273.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="183.0" text="User Name">
+                <Button layoutX="273.0" layoutY="10.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="196.0" text="User Name">
                     <HBox.margin>
                         <Insets top="20.0" />
                     </HBox.margin>
                 </Button>
             </children>
         </HBox>
-        <Label layoutX="12.0" layoutY="97.0" prefHeight="51.0" prefWidth="477.0" text="Guest Details">
+        <Label layoutX="12.0" layoutY="116.0" prefHeight="51.0" prefWidth="477.0" text="Guest Details">
             <font>
                 <Font name="System Bold" size="40.0" />
             </font>
@@ -98,7 +98,7 @@
             </font>
         </Label>
         <Button layoutX="322.0" layoutY="221.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="183.0" text="Search" />
-        <Button layoutX="609.0" layoutY="64.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="183.0" text="Log Out" />
+        <Button layoutX="596.0" layoutY="64.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="196.0" text="Log Out" />
         <Label layoutX="200.0" layoutY="326.0" prefHeight="35.0" prefWidth="315.0" text="Id">
             <font>
                 <Font size="20.0" />

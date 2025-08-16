@@ -12,7 +12,7 @@
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fivestarhotel.FinalProject_MahbubAlam_2221100.guestViewController">
     <children>
         <Button layoutX="747.0" layoutY="14.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="97.0" text="User Name" />
-        <Text layoutX="9.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hotel ABC" wrappingWidth="226.21630859375">
+        <Text layoutX="14.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 Star Hotel" wrappingWidth="298.21630859375">
             <font>
                 <Font size="50.0" />
             </font>
