@@ -99,7 +99,7 @@ public class JoinController {
 
     @javafx.fxml.FXML
     public void signInButtonOnAction(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader =  new FXMLLoader(JoinController.class.getResource("guestSignInViewIfJoined.fxml"));;
+        FXMLLoader fxmlLoader =  new FXMLLoader(JoinController.class.getResource("receptionistSignInViewIfJoined.fxml"));;
         Scene scene = new Scene(fxmlLoader.load());
         Stage newStage = (Stage)(((Node)actionEvent.getSource()).getScene().getWindow());
         newStage.setTitle("Sign In");

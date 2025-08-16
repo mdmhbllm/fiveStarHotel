@@ -61,7 +61,7 @@ public class profileViewController {
 
     @javafx.fxml.FXML
     public void backButtonOnAction(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader =  new FXMLLoader(profileViewController.class.getResource("guestSignInViewIfJoined.fxml"));;
+        FXMLLoader fxmlLoader =  new FXMLLoader(profileViewController.class.getResource("receptionistSignInViewIfJoined.fxml"));;
         Scene scene = new Scene(fxmlLoader.load());
         Stage newStage = (Stage)(((Node)actionEvent.getSource()).getScene().getWindow());
         newStage.setScene(scene);

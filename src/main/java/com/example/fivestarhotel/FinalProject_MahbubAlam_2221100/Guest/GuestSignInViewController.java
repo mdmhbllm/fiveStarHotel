@@ -20,7 +20,7 @@ public class GuestSignInViewController {
 
     @javafx.fxml.FXML
     public void signInSameView(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader =  new FXMLLoader(GuestSignInViewController.class.getResource("guestSignInViewIfJoined.fxml"));;
+        FXMLLoader fxmlLoader =  new FXMLLoader(GuestSignInViewController.class.getResource("receptionistSignInViewIfJoined.fxml"));;
         Scene scene = new Scene(fxmlLoader.load());
         Stage newStage = (Stage)(((Node)actionEvent.getSource()).getScene().getWindow());
         newStage.setTitle("Join");

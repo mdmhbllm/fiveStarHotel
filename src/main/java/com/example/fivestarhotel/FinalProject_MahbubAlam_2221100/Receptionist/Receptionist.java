@@ -6,11 +6,20 @@ import java.io.Serializable;
 import java.util.Random;
 
 public class Receptionist extends User implements Serializable {
-    private String deskId;
+    private String address;
+    private String country;
+    private String zipCode;
+    private String city;
+    private boolean isRegistered;;
 
-    public Receptionist(String name, String email, String password, String phoneNumber, String userId, String userType, String deskId) {
+    public Receptionist(String name, String email, String password, String phoneNumber, String userType,
+                        String address, String country, String zipCode, String city) {
         super(name, email, password, phoneNumber, generateReceptionistId(), userType);
-        this.deskId = deskId;
+        this.address = address;
+        this.country = country;
+        this.zipCode = zipCode;
+        this.city = city;
+        this.isRegistered = true;
     }
 
     @Override
@@ -52,11 +61,4 @@ public class Receptionist extends User implements Serializable {
         return "REC" + randomNumber;
     }
 
-    public String getDeskId() {
-        return deskId;
-    }
-
-    public void setDeskId(String deskId) {
-        this.deskId = deskId;
-    }
 }

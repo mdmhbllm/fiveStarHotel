@@ -63,7 +63,7 @@ public class GuestSignInViewJoiningController {
 
     @javafx.fxml.FXML
     public void sisignInOnAction(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader =  new FXMLLoader(GuestSignInViewJoiningController.class.getResource("guestSignInViewIfJoined.fxml"));;
+        FXMLLoader fxmlLoader =  new FXMLLoader(GuestSignInViewJoiningController.class.getResource("receptionistSignInViewIfJoined.fxml"));;
         Scene scene = new Scene(fxmlLoader.load());
         Stage newStage = (Stage)(((Node)actionEvent.getSource()).getScene().getWindow());
         newStage.setTitle("Sign In");

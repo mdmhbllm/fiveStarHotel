@@ -60,7 +60,7 @@ public class paymentAndGuestDetailsIfNotSignInController {
 
     @FXML
     public void signInOnAction(ActionEvent event) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(GuestControllerIfNotSignIn.class.getResource("guestSignInViewIfJoined.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GuestControllerIfNotSignIn.class.getResource("receptionistSignInViewIfJoined.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
         Stage newStage = new Stage();
         newStage.setScene(scene);
